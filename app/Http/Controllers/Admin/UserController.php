@@ -124,7 +124,6 @@ class UserController extends Controller
     public function destroy(User $user)
     {
         if(User::destroy($user->id)){
-            if (Profile::where('user_id','=',$user->id)->destroy())
             Session::flash('success','News deleted');
             return redirect()->back();
         }

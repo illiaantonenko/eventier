@@ -19,8 +19,6 @@ class User extends Authenticatable implements MustVerifyEmail
         'name', 'email', 'password',
     ];
 
-//    protected $attributes = ['fullName'];
-
     /**
      * The attributes that should be hidden for arrays.
      *
@@ -47,6 +45,10 @@ class User extends Authenticatable implements MustVerifyEmail
 
     public function event(){
         return $this->hasMany(Event::class);
+    }
+
+    public function eventRegistration(){
+        return $this->hasMany(EventRegistration::class);
     }
 
     public function getFullNameAttribute(){

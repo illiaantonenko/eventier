@@ -53,12 +53,12 @@
                             </li>
                         @endif
                     @else
-                        @if(auth()->user()->hasVerifiedEmail())
-                            @if(auth()->user()->role == 'admin')
+                        @verified
+                            @admin
                                 <li class="nav-item">
                                     <a class="nav-link" href="/admin">{{ __('Admin panel') }}</a>
                                 </li>
-                            @endif
+                            @endadmin
                             <li class="nav-item">
                                 <a class="nav-link" href="/dashboard">{{ __('Dashboard') }}</a>
                             </li>
@@ -68,14 +68,14 @@
                             <li class="nav-item">
                                 <a class="nav-link" href="/calendar">{{ __('Calendar') }}</a>
                             </li>
-                        @endif
+                        @endverified
                             <li class="nav-item dropdown">
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button"
                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                     {{ auth()->user()->full_name}} <span class="caret"></span>
                                 </a>
                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                                    @if(auth()->user()->hasVerifiedEmail())
+                                    @verified
                                         <a class="dropdown-item" href="/user/profile/my">
                                             {{ __('My Profile') }}
                                         </a>
@@ -85,7 +85,7 @@
                                         <a class="dropdown-item" href="/dashboard/absences">
                                             {{ __('Absences') }}
                                         </a>
-                                    @endif
+                                    @endverified
                                     <a class="dropdown-item" href="{{ route('logout') }}"
                                        onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">

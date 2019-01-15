@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Absence;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Session;
 
 class AbsenceController extends Controller
 {
@@ -25,7 +26,7 @@ class AbsenceController extends Controller
      */
     public function create()
     {
-        //
+        return view('absences.create');
     }
 
     /**
@@ -36,7 +37,20 @@ class AbsenceController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate([
+            'reason' => 'required|string'
+        ]);
+
+        $absence = Absence::create([
+           'user_id' => $request->user,
+           'reason' => $request->reason,
+            'date' => time(),
+        ]);
+
+        if ($absence){
+            Session::flash('success','Absence created successfully');
+            return redirect('/calendar');
+        }
     }
 
     /**

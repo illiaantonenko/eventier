@@ -58,7 +58,7 @@ Route::group(['prefix'=>'/admin','namespace'=>'Admin','middleware'=>['auth','adm
 
 Route::get('/home', 'HomeController@index')->name('home')->middleware('auth');
 
-Route::group(['middleware'=>['auth',/*'moderated',*/'verified']],function (){
+Route::group(['middleware'=>['auth','moderated','verified']],function (){
 
 //    Route::get('/', function () {
 //        return redirect('/dashboard');
@@ -80,5 +80,7 @@ Route::group(['middleware'=>['auth',/*'moderated',*/'verified']],function (){
     });
 
     Route::resource('events','EventController');
+    Route::get('/events/{event}/register','EventController@registerUserOnEvent');
+    Route::get('/events/confirm/{hash}','EventController@checkUserPresence')->middleware('eventOwner');
     Route::get('/calendar','CalendarController@index');
 });

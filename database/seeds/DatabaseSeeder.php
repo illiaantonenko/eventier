@@ -15,8 +15,11 @@ class DatabaseSeeder extends Seeder
         factory(\App\Models\User::class,25)->create()->each(function ($user){
             $user->profile()->save(factory(\App\Models\Profile::class)->make());
             $user->news()->saveMany(factory(\App\Models\News::class,10)->make());
-            $user->event()->saveMany(factory(\App\Models\Event::class,10)->make());
             $user->absence()->saveMany(factory(\App\Models\Absence::class,10)->make());
+            $user->event()->saveMany(factory(\App\Models\Event::class,10)->make());
+            $user->event()->each(function ($event){
+                $event->eventRegistration()->saveMany(factory(\App\Models\EventRegistration::class,5)->make());
+            });
         });
 
     }

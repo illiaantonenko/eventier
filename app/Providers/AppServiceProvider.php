@@ -2,6 +2,7 @@
 
 namespace App\Providers;
 
+use Illuminate\Support\Facades\Blade;
 use Illuminate\Support\Facades\View;
 use Illuminate\Support\ServiceProvider;
 
@@ -14,10 +15,36 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-//        View::composer(
-//            '*', function ($view){
-//            return $view->with(['test'=>'5']);
-//        });
+        Blade::directive('verified', function () {
+            $string = "<?php if(auth()->check()): ?>";
+            $string .= "<?php if(auth()->user()->hasVerifiedEmail()): ?>";
+            return $string;
+        });
+        Blade::directive('endverified', function () {
+            $string = "<?php endif; endif; ?>";
+            return $string;
+        });
+
+        Blade::directive('moderated',function (){
+            $string = "<?php if(auth()->check()): ?>";
+            $string .= "<?php if(auth()->user->moderated == '1'): ?>";
+            return $string;
+        });
+        Blade::directive('endmoderated', function () {
+            $string = "<?php endif; endif; ?>";
+            return $string;
+        });
+
+        Blade::directive('admin',function (){
+            $string = "<?php if(auth()->check()): ?>";
+            $string .= "<?php if(auth()->user()->role == 'admin'): ?>";
+            return $string;
+        });
+        Blade::directive('endadmin', function () {
+            $string = "<?php endif; endif; ?>";
+            return $string;
+        });
+
     }
 
     /**

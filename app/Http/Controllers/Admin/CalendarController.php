@@ -13,8 +13,8 @@ class CalendarController extends Controller
         $array = [];
         $events = Event::where('published','=','1')->select('id','title','start','end','category_id')->with('category')->get();
         foreach ($events as $event){
-            $event->start = date('Y-m-dTh:i:s',$event->start);
-            $event->end = date('Y-m-dTh:i:s',$event->end);
+            $event->start = date('Y-m-d\TH:i:s',$event->start);
+            $event->end = date('Y-m-d\TH:i:s',$event->end);
             $event->url = '/admin/events/'.$event->id;
             $event->color = $event->category->color;
             $event->textColor = $event->category->textColor;

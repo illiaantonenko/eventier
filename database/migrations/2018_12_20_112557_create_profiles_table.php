@@ -15,7 +15,7 @@ class CreateProfilesTable extends Migration
     {
         Schema::create('profiles', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('user_id');
+            $table->unsignedInteger('user_id');
             $table->string('firstname');
             $table->string('middlename')->nullable();
             $table->string('lastname');
@@ -25,6 +25,11 @@ class CreateProfilesTable extends Migration
             $table->integer('hideyear')->default(0);
             $table->string('phone')->nullable();
             $table->timestamps();
+
+            $table->foreign('user_id')
+                ->references('id')
+                ->on('users')
+                ->onDelete('cascade');
         });
     }
 

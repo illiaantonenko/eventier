@@ -42,10 +42,10 @@ const app = new Vue({
     },
     data(){
         return{
-            config: {
-                firstDay: 1,
-                editable: false
-            }
+            // config: {
+            //     firstDay: 1,
+            //      editable: false
+            // }
         }
     }
 });

@@ -8,22 +8,21 @@
                 <div class="float-right">
                     <div class="pagination-sm">{{ $events->links() }}</div>
                 </div>
-                <h1>{{ __('events') }}</h1>
+                <h1>{{ __('Events') }}</h1>
                 <div class="card-columns">
                     @foreach($events as $event)
-                        <div class="card">
-                            <div class="card-body">
-                                <div class="text-left">
-                                    <h5 style="display: inline-block">
-                                        <a href="/user/profile/{{ $event->user->id }}" style="text-decoration: none; color:#1e1e1e">
-                                            <strong>{{ $event->user->full_name }}:</strong>
-                                        </a>
-                                    </h5>
+                        <div class="card" style="background-color: {{ $event->category->color }}; color: {{ $event->category->textColor }}">
+                            <a href="/events/{{ $event->id }}" style="text-decoration: none; color: unset">
+                                <div class="card-header">
                                     {{ $event->title }}
-                                    <br/>
-                                    <div class="float-right">Date: {{  date('d-m-Y H:i',$event->start) }}</div>
                                 </div>
-                            </div>
+                                <div class="card-body">
+                                    <div class="text-left">
+                                        {{ $event->description }}
+                                        <div class="float-right" style="margin-top: 15px">Date: {{  date('d-m-Y H:i',$event->start) }}</div>
+                                    </div>
+                                </div>
+                            </a>
                         </div>
                     @endforeach
                 </div>

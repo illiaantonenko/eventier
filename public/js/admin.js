@@ -84049,7 +84049,7 @@ if (token) {
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! D:\Projects\eventManager\resources\js\admin.js */"./resources/js/admin.js");
+module.exports = __webpack_require__(/*! D:\Projects\eventier\resources\js\admin.js */"./resources/js/admin.js");
 
 
 /***/ })

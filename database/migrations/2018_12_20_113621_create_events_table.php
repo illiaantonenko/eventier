@@ -15,10 +15,10 @@ class CreateEventsTable extends Migration
     {
         Schema::create('events', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('user_id');
+            $table->unsignedInteger('user_id');
             $table->string('title');
             $table->text('description');
-            $table->integer('category_id');
+            $table->unsignedInteger('category_id');
             $table->integer('start')->nullable();
             $table->integer('end')->nullable();
             $table->enum('repeat',['never','everyday','everyweek','everymonth','everyyear'])->default('never');
