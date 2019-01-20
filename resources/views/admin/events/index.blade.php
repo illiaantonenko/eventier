@@ -5,12 +5,18 @@
     <div class="container-fluid">
         <div class="row">
             <div class="col-12">
-                <div class="pull-right">
-                    <a href="/admin/events/create"  class="btn btn-success btn-lg">Create event</a>
-                </div>
                 <h1>Events</h1>
+                <div class="navigation">
+                    <div class="pull-left">
+                        <a href="/admin/events/all" class="btn btn-info btn-lg">All events</a>
+                        <a href="/admin/events/new" class="btn btn-info btn-lg">New events</a>
+                    </div>
+                    <div class="pull-right">
+                        <a href="/admin/events/create"  class="btn btn-success btn-lg">Create event</a>
+                    </div>
+                </div>
                 <br>
-                <table class="table table-striped table-bordered">
+                <table class="table table-striped table-bordered" style="margin-top: 50px">
                     <tr>
                         <th>#</th>
                         <th>User</th>

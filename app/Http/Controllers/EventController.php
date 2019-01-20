@@ -18,7 +18,7 @@ class EventController extends Controller
      */
     public function index()
     {
-        $events = Event::orderBy('start', 'DESC')->with('category')->paginate(20);
+        $events = Event::where('published', '=', '1')->orderBy('start', 'DESC')->with('category')->paginate(20);
         return view('events.index', compact('events'));
     }
 
@@ -91,7 +91,6 @@ class EventController extends Controller
 
     public function registerUserOnEvent(Event $event)
     {
-//        dd(EventRegistration::where([['user_id','=',auth()->user()->id],['event_id','=',$event->id]])->first());
         if (!EventRegistration::where([['user_id', '=', auth()->user()->id], ['event_id', '=', $event->id]])->first()) {
             $hash = $this->createHash(20);
             $eventRegistration = EventRegistration::create([

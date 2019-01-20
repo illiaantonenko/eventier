@@ -2,10 +2,13 @@
 
 namespace App\Http\Controllers\Admin;
 
+use App\Mail\ModerationPassedMail;
+use App\Mail\WelcomeUserMail;
 use App\Models\Profile;
 use App\Models\User;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Session;
 
 class UserController extends Controller
@@ -100,7 +103,8 @@ class UserController extends Controller
      */
     public function edit(User $user)
     {
-        //
+        $user->with('profile');
+        return view('admin.users.edit',compact('user'));
     }
 
     /**
@@ -112,7 +116,42 @@ class UserController extends Controller
      */
     public function update(Request $request, User $user)
     {
-        //
+        $request->validate([
+            'firstname' => 'required|string',
+            'middlename' => 'required|string',
+            'nickname' => 'nullable|string',
+            'lastname' => 'required|string',
+            'phone' => 'required|string',
+            'birthdate' => 'required|string',
+            'email' => 'nullable|email',
+            'password' => 'nullable|confirmed',
+            'role' => 'required|string',
+            'hideyear' => 'required|integer',
+            'moderated' => 'required|integer'
+        ]);
+
+        if ($request->password){
+            $user->password = bcrypt($request->password);
+        }
+
+        if ($user->moderated == 0 && $request->moderated == 1){
+            Mail::to($user->email)->send(new ModerationPassedMail());
+        }
+        $user->moderated = $request->moderated;
+        $user->role = $request->role;
+
+        $user->profile->firstname = $request->firstname;
+        $user->profile->middlename = $request->middlename;
+        $user->profile->nickname = $request->nickname;
+        $user->profile->lastname = $request->lastname;
+        $user->profile->birthdate = strtotime($request->birthdate);
+        $user->profile->hideyear = $request->hideyear;
+        $user->profile->phone = $request->phone;
+
+        if($user->save() && $user->profile->save()){
+            Session::flash('success','User updated!');
+            return redirect('/admin/users');
+        }
     }
 
     /**

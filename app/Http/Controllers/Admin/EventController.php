@@ -20,7 +20,7 @@ class EventController extends Controller
     public function allEvents()
     {
         $events = Event::with('user.profile')->orderBy('id','DESC')->paginate(20);
-        return view('admin.events.allEvents',compact('events'));
+        return view('admin.events.index',compact('events'));
     }
     /**
      * Display a listing of the resource.
@@ -30,7 +30,7 @@ class EventController extends Controller
     public function newEvents()
     {
         $events = Event::where('published','=','0')->with('user.profile')->orderBy('id','DESC')->paginate(20);
-        return view('admin.events.newEvents',compact('events'));
+        return view('admin.events.index',compact('events'));
     }
 
     /**

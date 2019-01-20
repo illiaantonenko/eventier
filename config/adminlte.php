@@ -117,25 +117,16 @@ return [
 //            'can'  => 'manage-blog',
 //        ],
         [
-            'text'        => 'Events',
+            'text' => 'Calendar',
+            'url'  => 'admin/events/calendar',
             'icon'        => 'calendar',
+            'label_color' => 'info',
+        ],
+        [
+            'text'        => 'Events',
+            'url' => 'admin/events/all',
+            'icon'        => 'bell',
             'label_color' => 'success',
-            'submenu' => [
-                [
-                    'text' => 'New Events',
-                    'url' => 'admin/events/new',
-                    'label' => "5",
-                    'label_color' => 'success',
-                ],
-                [
-                    'text' => 'All Events',
-                    'url' => 'admin/events/all',
-                ],
-                [
-                    'text' => 'Calendar',
-                    'url'  => 'admin/events/calendar',
-                ],
-            ]
 
         ],
         [
@@ -156,17 +147,17 @@ return [
             'icon'        => 'users',
             'label_color' => 'success',
         ],
-        'ACCOUNT SETTINGS',
-        [
-            'text' => 'Profile',
-            'url'  => 'admin/settings',
-            'icon' => 'user',
-        ],
-        [
-            'text' => 'Change Password',
-            'url'  => 'admin/settings',
-            'icon' => 'lock',
-        ],
+//        'ACCOUNT SETTINGS',
+//        [
+//            'text' => 'Profile',
+//            'url'  => 'admin/settings',
+//            'icon' => 'user',
+//        ],
+//        [
+//            'text' => 'Change Password',
+//            'url'  => 'admin/settings',
+//            'icon' => 'lock',
+//        ],
 //        'LABELS',
 //        [
 //            'text'       => 'Important',

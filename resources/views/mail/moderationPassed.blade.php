@@ -4,7 +4,7 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
-    <title>Eventier Event Registration</title>
+    <title>Neopolitan Welcome Email</title>
     <!-- Designed by https://github.com/kaytcat -->
     <!-- Robot header image designed by Freepik.com -->
 
@@ -65,10 +65,6 @@
             width: 100% !important;
         }
 
-        .force-width-80 {
-            width: 80% !important;
-        }
-
 
     </style>
 
@@ -89,18 +85,13 @@
                 width: 320px !important;
             }
 
-            td[class="mobile-block"] {
-                width: 100% !important;
-                display: block !important;
-            }
-
 
         }
     </style>
 </head>
 <body class="body" style="padding:0; margin:0; display:block; background:#ffffff; -webkit-text-size-adjust:none"
       bgcolor="#ffffff">
-<table align="center" cellpadding="0" cellspacing="0" class="force-full-width" height="100%">
+<table align="center" cellpadding="0" cellspacing="0" width="100%" height="100%">
     <tr>
         <td align="center" valign="top" bgcolor="#ffffff" width="100%">
             <center>
@@ -108,30 +99,30 @@
                     <tr>
                         <td align="center" valign="top">
 
-                            <table style="margin: 0 auto;" cellpadding="0" cellspacing="0" class="force-full-width"
+                            <table style="margin: 0 auto;" cellpadding="0" cellspacing="0" width="100%"
                                    style="margin:0 auto;">
                                 <tr>
                                     <td style="font-size: 30px; text-align:center;">
                                         <br>
-                                        DevSup
+                                        Eventier
                                         <br>
                                         <br>
                                     </td>
                                 </tr>
                             </table>
 
-                            <table style="margin: 0 auto;" cellpadding="0" cellspacing="0" class="force-full-width"
+                            <table style="margin: 0 auto;" cellpadding="0" cellspacing="0" width="100%"
                                    bgcolor="#4dbfbf">
                                 <tr>
                                     <td>
                                         <br>
-                                        <img src="https://www.filepicker.io/api/file/carctJpuT0exMaN8WUYQ" width="224"
-                                             height="240" alt="robot picture">
+                                        <img src="https://www.filepicker.io/api/file/Pv8CShvQHeBXdhYu9aQE" width="216"
+                                             height="189" alt="robot picture">
                                     </td>
                                 </tr>
                                 <tr>
                                     <td class="headline">
-                                        Good News, {{ $user->profile->firstname }}!
+                                        Welcome!
                                     </td>
                                 </tr>
                                 <tr>
@@ -142,9 +133,8 @@
                                                 <tr>
                                                     <td style="color:#187272;">
                                                         <br>
-                                                        You've registered on event "{{ $event->title }}"! To confirm
-                                                        your presence on this event please give this QR-code to
-                                                        responsible person.
+                                                        You successfully passed our moderation. Now you can enjoy all
+                                                        features that our site can give you!
                                                         <br>
                                                         <br>
                                                     </td>
@@ -156,12 +146,16 @@
                                 </tr>
                                 <tr>
                                     <td>
-                                        <img
-                                            src="{{$message->embedData(\SimpleSoftwareIO\QrCode\Facades\QrCode::format('png')->size(200)->generate(url('/events/confirm/'.$hash)), 'QrCode.png', 'image/png')}}">
+                                        <div>
+                                            <a href="http://eventier.site"
+                                               style="background-color:#178f8f;border-radius:4px;color:#ffffff;display:inline-block;font-family:Helvetica, Arial, sans-serif;font-size:16px;font-weight:bold;line-height:50px;text-align:center;text-decoration:none;width:200px;-webkit-text-size-adjust:none;">Go
+                                                to Site!
+                                            </a>
+                                        </div>
+                                        <br>
+                                        <br>
                                     </td>
                                 </tr>
-                                <br>
-                                <br>
                             </table>
 
                             <table style="margin: 0 auto;" cellpadding="0" cellspacing="0" class="force-full-width"
@@ -194,7 +188,6 @@
                                     </td>
                                 </tr>
                             </table>
-
 
                         </td>
                     </tr>
