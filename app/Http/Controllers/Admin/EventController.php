@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Admin;
 use App\Models\Absence;
 use App\Models\Category;
 use App\Models\Event;
+use App\Models\EventRegistration;
 use App\Models\User;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
@@ -89,7 +90,8 @@ class EventController extends Controller
      */
     public function show(Event $event)
     {
-        return view('admin.events.show',compact('event'));
+        $eventRegistrations = EventRegistration::where('event_id', '=', $event->id)->with('user.profile')->orderBy('created_at', 'DESC')->get();
+        return view('admin.events.show',compact('event','eventRegistrations'));
     }
 
     /**

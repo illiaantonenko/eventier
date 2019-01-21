@@ -17,9 +17,32 @@
                         </ul>
                     </div>
                 </div>
-                <div class="content">
-                    {{ $event->description }}
+                <h3>
+                    <strong>Description</strong>
+                </h3>
+                <div class="box">
+                    <div class="box-body">
+                        {{ $event->description }}
+                    </div>
                 </div>
+                <h3><strong>Registered users</strong></h3>
+                @foreach($eventRegistrations as $eventRegistration)
+                    <div class="info-box" style="margin-bottom: 15px">
+                        <span class="info-box-icon">
+                            <img src="{{ $eventRegistration->user->profile->image->small->url }}">
+                        </span>
+                        <div class="info-box-content">
+                            {{ $eventRegistration->user->full_name }}
+                            <div class="pull-right">
+                                Registered: {{ $eventRegistration->created_at->diffForHumans() }}
+                            </div>
+                            @if($eventRegistration->came == 0 && $event->date < strtotime('today'))
+                                <br>
+                                <span class="text-danger">Missed!</span>
+                            @endif
+                        </div>
+                    </div>
+                @endforeach
             </div>
         </div>
     </div>
