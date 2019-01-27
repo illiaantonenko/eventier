@@ -51,7 +51,7 @@ class EventController extends Controller
      */
     public function show(Event $event)
     {
-        $eventRegistrations = EventRegistration::where('event_id', '=', $event->id)->with('user.profile')->orderBy('created_at', 'DESC')->get();
+        $eventRegistrations = EventRegistration::where('event_id', '=', $event->id)->with('user.profile')->orderBy('came','DESC')->orderBy('created_at', 'DESC')->get();
         return view('events.show', compact('event', 'eventRegistrations'));
     }
 
