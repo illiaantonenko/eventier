@@ -17,7 +17,7 @@ class CheckIfModerated
     public function handle($request, Closure $next)
     {
         if(Auth::check()){
-            if (Auth::user()->moderated == '1'){
+            if (Auth::user()->moderated){
                 return $next($request);
             }
         }

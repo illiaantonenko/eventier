@@ -10,7 +10,11 @@ require('./bootstrap');
 window.Vue = require('vue');
 import Datepicker from 'vuejs-datepicker';
 import FullCalendar from 'vue-full-calendar';
+import colorPicker from '@caohenghu/vue-colorpicker'
 Vue.use(FullCalendar);
+
+Vue.component('calendar', require('./components/Calendar.vue').default);
+
 
 /**
  * The following block of code may be used to automatically register your
@@ -33,11 +37,12 @@ const app = new Vue({
     el: '#app',
     components: {
         Datepicker,
-
+        colorPicker
     },
     data(){
         return{
             config: {
+                defaultView:'month',
                 firstDay: 1,
             }
         }

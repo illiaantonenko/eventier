@@ -86,6 +86,119 @@
 /************************************************************************/
 /******/ ({
 
+/***/ "./node_modules/@caohenghu/vue-colorpicker/src/img/sucker.png":
+/*!********************************************************************!*\
+  !*** ./node_modules/@caohenghu/vue-colorpicker/src/img/sucker.png ***!
+  \********************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "/images/vendor/@caohenghu/vue-colorpicker/src/sucker.png?e5e05b66fa595d2234fe5e80fa1b1541";
+
+/***/ }),
+
+/***/ "./node_modules/@caohenghu/vue-colorpicker/src/vue/Color.vue":
+/*!*******************************************************************!*\
+  !*** ./node_modules/@caohenghu/vue-colorpicker/src/vue/Color.vue ***!
+  \*******************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _Color_vue_vue_type_template_id_e7d88394___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Color.vue?vue&type=template&id=e7d88394& */ "./node_modules/@caohenghu/vue-colorpicker/src/vue/Color.vue?vue&type=template&id=e7d88394&");
+/* harmony import */ var _Color_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Color.vue?vue&type=script&lang=js& */ "./node_modules/@caohenghu/vue-colorpicker/src/vue/Color.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport *//* harmony import */ var _Color_vue_vue_type_style_index_0_lang_scss___WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Color.vue?vue&type=style&index=0&lang=scss& */ "./node_modules/@caohenghu/vue-colorpicker/src/vue/Color.vue?vue&type=style&index=0&lang=scss&");
+/* harmony import */ var _vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../../vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+
+/* normalize component */
+
+var component = Object(_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_3__["default"])(
+  _Color_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _Color_vue_vue_type_template_id_e7d88394___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _Color_vue_vue_type_template_id_e7d88394___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "node_modules/@caohenghu/vue-colorpicker/src/vue/Color.vue"
+/* harmony default export */ __webpack_exports__["default"] = (component.exports);
+
+/***/ }),
+
+/***/ "./node_modules/@caohenghu/vue-colorpicker/src/vue/Color.vue?vue&type=script&lang=js&":
+/*!********************************************************************************************!*\
+  !*** ./node_modules/@caohenghu/vue-colorpicker/src/vue/Color.vue?vue&type=script&lang=js& ***!
+  \********************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _vue_loader_lib_index_js_vue_loader_options_Color_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../vue-loader/lib??vue-loader-options!./Color.vue?vue&type=script&lang=js& */ "./node_modules/vue-loader/lib/index.js?!./node_modules/@caohenghu/vue-colorpicker/src/vue/Color.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_vue_loader_lib_index_js_vue_loader_options_Color_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
+/***/ "./node_modules/@caohenghu/vue-colorpicker/src/vue/Color.vue?vue&type=style&index=0&lang=scss&":
+/*!*****************************************************************************************************!*\
+  !*** ./node_modules/@caohenghu/vue-colorpicker/src/vue/Color.vue?vue&type=style&index=0&lang=scss& ***!
+  \*****************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _style_loader_index_js_css_loader_index_js_vue_loader_lib_loaders_stylePostLoader_js_postcss_loader_src_index_js_ref_8_2_sass_loader_lib_loader_js_ref_8_3_vue_loader_lib_index_js_vue_loader_options_Color_vue_vue_type_style_index_0_lang_scss___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../style-loader!../../../../css-loader!../../../../vue-loader/lib/loaders/stylePostLoader.js!../../../../postcss-loader/src??ref--8-2!../../../../sass-loader/lib/loader.js??ref--8-3!../../../../vue-loader/lib??vue-loader-options!./Color.vue?vue&type=style&index=0&lang=scss& */ "./node_modules/style-loader/index.js!./node_modules/css-loader/index.js!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/lib/loader.js?!./node_modules/vue-loader/lib/index.js?!./node_modules/@caohenghu/vue-colorpicker/src/vue/Color.vue?vue&type=style&index=0&lang=scss&");
+/* harmony import */ var _style_loader_index_js_css_loader_index_js_vue_loader_lib_loaders_stylePostLoader_js_postcss_loader_src_index_js_ref_8_2_sass_loader_lib_loader_js_ref_8_3_vue_loader_lib_index_js_vue_loader_options_Color_vue_vue_type_style_index_0_lang_scss___WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_style_loader_index_js_css_loader_index_js_vue_loader_lib_loaders_stylePostLoader_js_postcss_loader_src_index_js_ref_8_2_sass_loader_lib_loader_js_ref_8_3_vue_loader_lib_index_js_vue_loader_options_Color_vue_vue_type_style_index_0_lang_scss___WEBPACK_IMPORTED_MODULE_0__);
+/* harmony reexport (unknown) */ for(var __WEBPACK_IMPORT_KEY__ in _style_loader_index_js_css_loader_index_js_vue_loader_lib_loaders_stylePostLoader_js_postcss_loader_src_index_js_ref_8_2_sass_loader_lib_loader_js_ref_8_3_vue_loader_lib_index_js_vue_loader_options_Color_vue_vue_type_style_index_0_lang_scss___WEBPACK_IMPORTED_MODULE_0__) if(__WEBPACK_IMPORT_KEY__ !== 'default') (function(key) { __webpack_require__.d(__webpack_exports__, key, function() { return _style_loader_index_js_css_loader_index_js_vue_loader_lib_loaders_stylePostLoader_js_postcss_loader_src_index_js_ref_8_2_sass_loader_lib_loader_js_ref_8_3_vue_loader_lib_index_js_vue_loader_options_Color_vue_vue_type_style_index_0_lang_scss___WEBPACK_IMPORTED_MODULE_0__[key]; }) }(__WEBPACK_IMPORT_KEY__));
+ /* harmony default export */ __webpack_exports__["default"] = (_style_loader_index_js_css_loader_index_js_vue_loader_lib_loaders_stylePostLoader_js_postcss_loader_src_index_js_ref_8_2_sass_loader_lib_loader_js_ref_8_3_vue_loader_lib_index_js_vue_loader_options_Color_vue_vue_type_style_index_0_lang_scss___WEBPACK_IMPORTED_MODULE_0___default.a); 
+
+/***/ }),
+
+/***/ "./node_modules/@caohenghu/vue-colorpicker/src/vue/Color.vue?vue&type=template&id=e7d88394&":
+/*!**************************************************************************************************!*\
+  !*** ./node_modules/@caohenghu/vue-colorpicker/src/vue/Color.vue?vue&type=template&id=e7d88394& ***!
+  \**************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _vue_loader_lib_loaders_templateLoader_js_vue_loader_options_vue_loader_lib_index_js_vue_loader_options_Color_vue_vue_type_template_id_e7d88394___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../vue-loader/lib??vue-loader-options!./Color.vue?vue&type=template&id=e7d88394& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./node_modules/@caohenghu/vue-colorpicker/src/vue/Color.vue?vue&type=template&id=e7d88394&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _vue_loader_lib_loaders_templateLoader_js_vue_loader_options_vue_loader_lib_index_js_vue_loader_options_Color_vue_vue_type_template_id_e7d88394___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _vue_loader_lib_loaders_templateLoader_js_vue_loader_options_vue_loader_lib_index_js_vue_loader_options_Color_vue_vue_type_template_id_e7d88394___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+
+
+
+/***/ }),
+
+/***/ "./node_modules/@caohenghu/vue-colorpicker/src/vue/main.js":
+/*!*****************************************************************!*\
+  !*** ./node_modules/@caohenghu/vue-colorpicker/src/vue/main.js ***!
+  \*****************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _Color_vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Color.vue */ "./node_modules/@caohenghu/vue-colorpicker/src/vue/Color.vue");
+
+/* harmony default export */ __webpack_exports__["default"] = (_Color_vue__WEBPACK_IMPORTED_MODULE_0__["default"]);
+
+/***/ }),
+
 /***/ "./node_modules/axios/index.js":
 /*!*************************************!*\
   !*** ./node_modules/axios/index.js ***!
@@ -1751,6 +1864,36 @@ module.exports = {
   trim: trim
 };
 
+
+/***/ }),
+
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/Calendar.vue?vue&type=script&lang=js&":
+/*!*******************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/Calendar.vue?vue&type=script&lang=js& ***!
+  \*******************************************************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+//
+//
+//
+//
+/* harmony default export */ __webpack_exports__["default"] = ({
+  props: ['events', 'lang'],
+  data: function data() {
+    return {
+      // language: '',
+      config: {
+        defaultView: 'month',
+        firstDay: 1,
+        editable: false,
+        locale: this.lang === 'en' ? 'en' : 'uk'
+      }
+    };
+  }
+});
 
 /***/ }),
 
@@ -5704,6 +5847,131 @@ module.exports = {
 
 })));
 //# sourceMappingURL=bootstrap.js.map
+
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/index.js!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/lib/loader.js?!./node_modules/vue-loader/lib/index.js?!./node_modules/@caohenghu/vue-colorpicker/src/vue/Color.vue?vue&type=style&index=0&lang=scss&":
+/*!*****************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src??ref--8-2!./node_modules/sass-loader/lib/loader.js??ref--8-3!./node_modules/vue-loader/lib??vue-loader-options!./node_modules/@caohenghu/vue-colorpicker/src/vue/Color.vue?vue&type=style&index=0&lang=scss& ***!
+  \*****************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(/*! ../../../../css-loader/lib/css-base.js */ "./node_modules/css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, ".hu-color-picker {\n  padding: 10px;\n  background: #1d2024;\n  border-radius: 4px;\n  box-shadow: 0 0 16px 0 rgba(0, 0, 0, 0.16);\n  z-index: 1;\n}\n.hu-color-picker.light {\n  background: #f7f8f9;\n}\n.hu-color-picker.light .color-show .sucker {\n  background: #eceef0;\n}\n.hu-color-picker.light .color-type .name {\n  background: #e7e8e9;\n}\n.hu-color-picker.light .color-type .value {\n  color: #666;\n  background: #eceef0;\n}\n.hu-color-picker.light .colors.history {\n  border-top: 1px solid #eee;\n}\n.hu-color-picker canvas {\n  vertical-align: top;\n}\n.hu-color-picker .color-set {\n  display: flex;\n}\n.hu-color-picker .color-set .saturation {\n  position: relative;\n  cursor: pointer;\n}\n.hu-color-picker .color-set .saturation .slide {\n  position: absolute;\n  left: 100px;\n  top: 0;\n  width: 10px;\n  height: 10px;\n  border-radius: 50%;\n  border: 1px solid #fff;\n  box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.3);\n  pointer-events: none;\n}\n.hu-color-picker .color-set .hue {\n  position: relative;\n  margin-left: 8px;\n  cursor: pointer;\n}\n.hu-color-picker .color-set .hue .slide {\n  position: absolute;\n  left: 0;\n  top: 100px;\n  width: 100%;\n  height: 4px;\n  background: #fff;\n  box-shadow: 0 0 1px 0 rgba(0, 0, 0, 0.3);\n  pointer-events: none;\n}\n.hu-color-picker .color-set .alpha {\n  position: relative;\n  margin-left: 8px;\n  cursor: pointer;\n}\n.hu-color-picker .color-set .alpha .slide {\n  position: absolute;\n  left: 0;\n  top: 100px;\n  width: 100%;\n  height: 4px;\n  background: #fff;\n  box-shadow: 0 0 1px 0 rgba(0, 0, 0, 0.3);\n  pointer-events: none;\n}\n.hu-color-picker .color-show {\n  margin-top: 8px;\n  display: flex;\n}\n.hu-color-picker .color-show .show {\n  position: relative;\n  flex: 1;\n}\n.hu-color-picker .color-show .show .color {\n  position: absolute;\n  left: 0;\n  top: 0;\n  width: 100%;\n  height: 100%;\n}\n.hu-color-picker .color-show .sucker {\n  width: 30px;\n  fill: #9099a4;\n  background: #2e333a;\n  cursor: pointer;\n  transition: all 0.3s;\n}\n.hu-color-picker .color-show .sucker:hover, .hu-color-picker .color-show .sucker.active {\n  fill: #1593ff;\n}\n.hu-color-picker .color-type {\n  margin-top: 8px;\n  font-size: 12px;\n}\n.hu-color-picker .color-type .name {\n  width: 60px;\n  height: 30px;\n  float: left;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  color: #999;\n  background: #252930;\n}\n.hu-color-picker .color-type .value {\n  height: 30px;\n  padding: 0 12px;\n  border: 0;\n  color: #fff;\n  background: #2e333a;\n  box-sizing: border-box;\n}\n.hu-color-picker .colors {\n  padding: 0;\n  margin: 0;\n}\n.hu-color-picker .colors.history {\n  margin-top: 10px;\n  border-top: 1px solid #2e333a;\n}\n.hu-color-picker .colors .item {\n  position: relative;\n  width: 16px;\n  height: 16px;\n  margin: 10px 0 0 10px;\n  border-radius: 3px;\n  box-sizing: border-box;\n  vertical-align: top;\n  display: inline-block;\n  transition: all 0.1s;\n  cursor: pointer;\n}\n.hu-color-picker .colors .item:nth-child(8n+1) {\n  margin-left: 0;\n}\n.hu-color-picker .colors .item:hover {\n  -webkit-transform: scale(1.4);\n          transform: scale(1.4);\n}\n.hu-color-picker .colors .item .alpha {\n  height: 100%;\n  border-radius: 4px;\n}\n.hu-color-picker .colors .item .color {\n  position: absolute;\n  left: 0;\n  top: 0;\n  width: 100%;\n  height: 100%;\n  border-radius: 3px;\n}", ""]);
+
+// exports
+
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/index.js?!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/Calendar.vue?vue&type=style&index=0&id=052a41a9&scoped=true&lang=css&":
+/*!**************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader??ref--7-1!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src??ref--7-2!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/Calendar.vue?vue&type=style&index=0&id=052a41a9&scoped=true&lang=css& ***!
+  \**************************************************************************************************************************************************************************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loader/lib/css-base.js */ "./node_modules/css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
+
+// exports
+
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/lib/css-base.js":
+/*!*************************************************!*\
+  !*** ./node_modules/css-loader/lib/css-base.js ***!
+  \*************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+/*
+	MIT License http://www.opensource.org/licenses/mit-license.php
+	Author Tobias Koppers @sokra
+*/
+// css base code, injected by the css-loader
+module.exports = function(useSourceMap) {
+	var list = [];
+
+	// return the list of modules as css string
+	list.toString = function toString() {
+		return this.map(function (item) {
+			var content = cssWithMappingToString(item, useSourceMap);
+			if(item[2]) {
+				return "@media " + item[2] + "{" + content + "}";
+			} else {
+				return content;
+			}
+		}).join("");
+	};
+
+	// import a list of modules into the list
+	list.i = function(modules, mediaQuery) {
+		if(typeof modules === "string")
+			modules = [[null, modules, ""]];
+		var alreadyImportedModules = {};
+		for(var i = 0; i < this.length; i++) {
+			var id = this[i][0];
+			if(typeof id === "number")
+				alreadyImportedModules[id] = true;
+		}
+		for(i = 0; i < modules.length; i++) {
+			var item = modules[i];
+			// skip already imported module
+			// this implementation is not 100% perfect for weird media query combinations
+			//  when a module is imported multiple times with different media queries.
+			//  I hope this will never occur (Hey this way we have smaller bundles)
+			if(typeof item[0] !== "number" || !alreadyImportedModules[item[0]]) {
+				if(mediaQuery && !item[2]) {
+					item[2] = mediaQuery;
+				} else if(mediaQuery) {
+					item[2] = "(" + item[2] + ") and (" + mediaQuery + ")";
+				}
+				list.push(item);
+			}
+		}
+	};
+	return list;
+};
+
+function cssWithMappingToString(item, useSourceMap) {
+	var content = item[1] || '';
+	var cssMapping = item[3];
+	if (!cssMapping) {
+		return content;
+	}
+
+	if (useSourceMap && typeof btoa === 'function') {
+		var sourceMapping = toComment(cssMapping);
+		var sourceURLs = cssMapping.sources.map(function (source) {
+			return '/*# sourceURL=' + cssMapping.sourceRoot + source + ' */'
+		});
+
+		return [content].concat(sourceURLs).concat([sourceMapping]).join('\n');
+	}
+
+	return [content].join('\n');
+}
+
+// Adapted from convert-source-map (MIT)
+function toComment(sourceMap) {
+	// eslint-disable-next-line no-undef
+	var base64 = btoa(unescape(encodeURIComponent(JSON.stringify(sourceMap))));
+	var data = 'sourceMappingURL=data:application/json;charset=utf-8;base64,' + base64;
+
+	return '/*# ' + data + ' */';
+}
 
 
 /***/ }),
@@ -70754,6 +71022,575 @@ process.umask = function() { return 0; };
 
 /***/ }),
 
+/***/ "./node_modules/style-loader/index.js!./node_modules/css-loader/index.js!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/lib/loader.js?!./node_modules/vue-loader/lib/index.js?!./node_modules/@caohenghu/vue-colorpicker/src/vue/Color.vue?vue&type=style&index=0&lang=scss&":
+/*!*********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/style-loader!./node_modules/css-loader!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src??ref--8-2!./node_modules/sass-loader/lib/loader.js??ref--8-3!./node_modules/vue-loader/lib??vue-loader-options!./node_modules/@caohenghu/vue-colorpicker/src/vue/Color.vue?vue&type=style&index=0&lang=scss& ***!
+  \*********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+
+var content = __webpack_require__(/*! !../../../../css-loader!../../../../vue-loader/lib/loaders/stylePostLoader.js!../../../../postcss-loader/src??ref--8-2!../../../../sass-loader/lib/loader.js??ref--8-3!../../../../vue-loader/lib??vue-loader-options!./Color.vue?vue&type=style&index=0&lang=scss& */ "./node_modules/css-loader/index.js!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/lib/loader.js?!./node_modules/vue-loader/lib/index.js?!./node_modules/@caohenghu/vue-colorpicker/src/vue/Color.vue?vue&type=style&index=0&lang=scss&");
+
+if(typeof content === 'string') content = [[module.i, content, '']];
+
+var transform;
+var insertInto;
+
+
+
+var options = {"hmr":true}
+
+options.transform = transform
+options.insertInto = undefined;
+
+var update = __webpack_require__(/*! ../../../../style-loader/lib/addStyles.js */ "./node_modules/style-loader/lib/addStyles.js")(content, options);
+
+if(content.locals) module.exports = content.locals;
+
+if(false) {}
+
+/***/ }),
+
+/***/ "./node_modules/style-loader/index.js!./node_modules/css-loader/index.js?!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/Calendar.vue?vue&type=style&index=0&id=052a41a9&scoped=true&lang=css&":
+/*!******************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/style-loader!./node_modules/css-loader??ref--7-1!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src??ref--7-2!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/Calendar.vue?vue&type=style&index=0&id=052a41a9&scoped=true&lang=css& ***!
+  \******************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+
+var content = __webpack_require__(/*! !../../../node_modules/css-loader??ref--7-1!../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../node_modules/postcss-loader/src??ref--7-2!../../../node_modules/vue-loader/lib??vue-loader-options!./Calendar.vue?vue&type=style&index=0&id=052a41a9&scoped=true&lang=css& */ "./node_modules/css-loader/index.js?!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/Calendar.vue?vue&type=style&index=0&id=052a41a9&scoped=true&lang=css&");
+
+if(typeof content === 'string') content = [[module.i, content, '']];
+
+var transform;
+var insertInto;
+
+
+
+var options = {"hmr":true}
+
+options.transform = transform
+options.insertInto = undefined;
+
+var update = __webpack_require__(/*! ../../../node_modules/style-loader/lib/addStyles.js */ "./node_modules/style-loader/lib/addStyles.js")(content, options);
+
+if(content.locals) module.exports = content.locals;
+
+if(false) {}
+
+/***/ }),
+
+/***/ "./node_modules/style-loader/lib/addStyles.js":
+/*!****************************************************!*\
+  !*** ./node_modules/style-loader/lib/addStyles.js ***!
+  \****************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+/*
+	MIT License http://www.opensource.org/licenses/mit-license.php
+	Author Tobias Koppers @sokra
+*/
+
+var stylesInDom = {};
+
+var	memoize = function (fn) {
+	var memo;
+
+	return function () {
+		if (typeof memo === "undefined") memo = fn.apply(this, arguments);
+		return memo;
+	};
+};
+
+var isOldIE = memoize(function () {
+	// Test for IE <= 9 as proposed by Browserhacks
+	// @see http://browserhacks.com/#hack-e71d8692f65334173fee715c222cb805
+	// Tests for existence of standard globals is to allow style-loader
+	// to operate correctly into non-standard environments
+	// @see https://github.com/webpack-contrib/style-loader/issues/177
+	return window && document && document.all && !window.atob;
+});
+
+var getTarget = function (target, parent) {
+  if (parent){
+    return parent.querySelector(target);
+  }
+  return document.querySelector(target);
+};
+
+var getElement = (function (fn) {
+	var memo = {};
+
+	return function(target, parent) {
+                // If passing function in options, then use it for resolve "head" element.
+                // Useful for Shadow Root style i.e
+                // {
+                //   insertInto: function () { return document.querySelector("#foo").shadowRoot }
+                // }
+                if (typeof target === 'function') {
+                        return target();
+                }
+                if (typeof memo[target] === "undefined") {
+			var styleTarget = getTarget.call(this, target, parent);
+			// Special case to return head of iframe instead of iframe itself
+			if (window.HTMLIFrameElement && styleTarget instanceof window.HTMLIFrameElement) {
+				try {
+					// This will throw an exception if access to iframe is blocked
+					// due to cross-origin restrictions
+					styleTarget = styleTarget.contentDocument.head;
+				} catch(e) {
+					styleTarget = null;
+				}
+			}
+			memo[target] = styleTarget;
+		}
+		return memo[target]
+	};
+})();
+
+var singleton = null;
+var	singletonCounter = 0;
+var	stylesInsertedAtTop = [];
+
+var	fixUrls = __webpack_require__(/*! ./urls */ "./node_modules/style-loader/lib/urls.js");
+
+module.exports = function(list, options) {
+	if (typeof DEBUG !== "undefined" && DEBUG) {
+		if (typeof document !== "object") throw new Error("The style-loader cannot be used in a non-browser environment");
+	}
+
+	options = options || {};
+
+	options.attrs = typeof options.attrs === "object" ? options.attrs : {};
+
+	// Force single-tag solution on IE6-9, which has a hard limit on the # of <style>
+	// tags it will allow on a page
+	if (!options.singleton && typeof options.singleton !== "boolean") options.singleton = isOldIE();
+
+	// By default, add <style> tags to the <head> element
+        if (!options.insertInto) options.insertInto = "head";
+
+	// By default, add <style> tags to the bottom of the target
+	if (!options.insertAt) options.insertAt = "bottom";
+
+	var styles = listToStyles(list, options);
+
+	addStylesToDom(styles, options);
+
+	return function update (newList) {
+		var mayRemove = [];
+
+		for (var i = 0; i < styles.length; i++) {
+			var item = styles[i];
+			var domStyle = stylesInDom[item.id];
+
+			domStyle.refs--;
+			mayRemove.push(domStyle);
+		}
+
+		if(newList) {
+			var newStyles = listToStyles(newList, options);
+			addStylesToDom(newStyles, options);
+		}
+
+		for (var i = 0; i < mayRemove.length; i++) {
+			var domStyle = mayRemove[i];
+
+			if(domStyle.refs === 0) {
+				for (var j = 0; j < domStyle.parts.length; j++) domStyle.parts[j]();
+
+				delete stylesInDom[domStyle.id];
+			}
+		}
+	};
+};
+
+function addStylesToDom (styles, options) {
+	for (var i = 0; i < styles.length; i++) {
+		var item = styles[i];
+		var domStyle = stylesInDom[item.id];
+
+		if(domStyle) {
+			domStyle.refs++;
+
+			for(var j = 0; j < domStyle.parts.length; j++) {
+				domStyle.parts[j](item.parts[j]);
+			}
+
+			for(; j < item.parts.length; j++) {
+				domStyle.parts.push(addStyle(item.parts[j], options));
+			}
+		} else {
+			var parts = [];
+
+			for(var j = 0; j < item.parts.length; j++) {
+				parts.push(addStyle(item.parts[j], options));
+			}
+
+			stylesInDom[item.id] = {id: item.id, refs: 1, parts: parts};
+		}
+	}
+}
+
+function listToStyles (list, options) {
+	var styles = [];
+	var newStyles = {};
+
+	for (var i = 0; i < list.length; i++) {
+		var item = list[i];
+		var id = options.base ? item[0] + options.base : item[0];
+		var css = item[1];
+		var media = item[2];
+		var sourceMap = item[3];
+		var part = {css: css, media: media, sourceMap: sourceMap};
+
+		if(!newStyles[id]) styles.push(newStyles[id] = {id: id, parts: [part]});
+		else newStyles[id].parts.push(part);
+	}
+
+	return styles;
+}
+
+function insertStyleElement (options, style) {
+	var target = getElement(options.insertInto)
+
+	if (!target) {
+		throw new Error("Couldn't find a style target. This probably means that the value for the 'insertInto' parameter is invalid.");
+	}
+
+	var lastStyleElementInsertedAtTop = stylesInsertedAtTop[stylesInsertedAtTop.length - 1];
+
+	if (options.insertAt === "top") {
+		if (!lastStyleElementInsertedAtTop) {
+			target.insertBefore(style, target.firstChild);
+		} else if (lastStyleElementInsertedAtTop.nextSibling) {
+			target.insertBefore(style, lastStyleElementInsertedAtTop.nextSibling);
+		} else {
+			target.appendChild(style);
+		}
+		stylesInsertedAtTop.push(style);
+	} else if (options.insertAt === "bottom") {
+		target.appendChild(style);
+	} else if (typeof options.insertAt === "object" && options.insertAt.before) {
+		var nextSibling = getElement(options.insertAt.before, target);
+		target.insertBefore(style, nextSibling);
+	} else {
+		throw new Error("[Style Loader]\n\n Invalid value for parameter 'insertAt' ('options.insertAt') found.\n Must be 'top', 'bottom', or Object.\n (https://github.com/webpack-contrib/style-loader#insertat)\n");
+	}
+}
+
+function removeStyleElement (style) {
+	if (style.parentNode === null) return false;
+	style.parentNode.removeChild(style);
+
+	var idx = stylesInsertedAtTop.indexOf(style);
+	if(idx >= 0) {
+		stylesInsertedAtTop.splice(idx, 1);
+	}
+}
+
+function createStyleElement (options) {
+	var style = document.createElement("style");
+
+	if(options.attrs.type === undefined) {
+		options.attrs.type = "text/css";
+	}
+
+	if(options.attrs.nonce === undefined) {
+		var nonce = getNonce();
+		if (nonce) {
+			options.attrs.nonce = nonce;
+		}
+	}
+
+	addAttrs(style, options.attrs);
+	insertStyleElement(options, style);
+
+	return style;
+}
+
+function createLinkElement (options) {
+	var link = document.createElement("link");
+
+	if(options.attrs.type === undefined) {
+		options.attrs.type = "text/css";
+	}
+	options.attrs.rel = "stylesheet";
+
+	addAttrs(link, options.attrs);
+	insertStyleElement(options, link);
+
+	return link;
+}
+
+function addAttrs (el, attrs) {
+	Object.keys(attrs).forEach(function (key) {
+		el.setAttribute(key, attrs[key]);
+	});
+}
+
+function getNonce() {
+	if (false) {}
+
+	return __webpack_require__.nc;
+}
+
+function addStyle (obj, options) {
+	var style, update, remove, result;
+
+	// If a transform function was defined, run it on the css
+	if (options.transform && obj.css) {
+	    result = typeof options.transform === 'function'
+		 ? options.transform(obj.css) 
+		 : options.transform.default(obj.css);
+
+	    if (result) {
+	    	// If transform returns a value, use that instead of the original css.
+	    	// This allows running runtime transformations on the css.
+	    	obj.css = result;
+	    } else {
+	    	// If the transform function returns a falsy value, don't add this css.
+	    	// This allows conditional loading of css
+	    	return function() {
+	    		// noop
+	    	};
+	    }
+	}
+
+	if (options.singleton) {
+		var styleIndex = singletonCounter++;
+
+		style = singleton || (singleton = createStyleElement(options));
+
+		update = applyToSingletonTag.bind(null, style, styleIndex, false);
+		remove = applyToSingletonTag.bind(null, style, styleIndex, true);
+
+	} else if (
+		obj.sourceMap &&
+		typeof URL === "function" &&
+		typeof URL.createObjectURL === "function" &&
+		typeof URL.revokeObjectURL === "function" &&
+		typeof Blob === "function" &&
+		typeof btoa === "function"
+	) {
+		style = createLinkElement(options);
+		update = updateLink.bind(null, style, options);
+		remove = function () {
+			removeStyleElement(style);
+
+			if(style.href) URL.revokeObjectURL(style.href);
+		};
+	} else {
+		style = createStyleElement(options);
+		update = applyToTag.bind(null, style);
+		remove = function () {
+			removeStyleElement(style);
+		};
+	}
+
+	update(obj);
+
+	return function updateStyle (newObj) {
+		if (newObj) {
+			if (
+				newObj.css === obj.css &&
+				newObj.media === obj.media &&
+				newObj.sourceMap === obj.sourceMap
+			) {
+				return;
+			}
+
+			update(obj = newObj);
+		} else {
+			remove();
+		}
+	};
+}
+
+var replaceText = (function () {
+	var textStore = [];
+
+	return function (index, replacement) {
+		textStore[index] = replacement;
+
+		return textStore.filter(Boolean).join('\n');
+	};
+})();
+
+function applyToSingletonTag (style, index, remove, obj) {
+	var css = remove ? "" : obj.css;
+
+	if (style.styleSheet) {
+		style.styleSheet.cssText = replaceText(index, css);
+	} else {
+		var cssNode = document.createTextNode(css);
+		var childNodes = style.childNodes;
+
+		if (childNodes[index]) style.removeChild(childNodes[index]);
+
+		if (childNodes.length) {
+			style.insertBefore(cssNode, childNodes[index]);
+		} else {
+			style.appendChild(cssNode);
+		}
+	}
+}
+
+function applyToTag (style, obj) {
+	var css = obj.css;
+	var media = obj.media;
+
+	if(media) {
+		style.setAttribute("media", media)
+	}
+
+	if(style.styleSheet) {
+		style.styleSheet.cssText = css;
+	} else {
+		while(style.firstChild) {
+			style.removeChild(style.firstChild);
+		}
+
+		style.appendChild(document.createTextNode(css));
+	}
+}
+
+function updateLink (link, options, obj) {
+	var css = obj.css;
+	var sourceMap = obj.sourceMap;
+
+	/*
+		If convertToAbsoluteUrls isn't defined, but sourcemaps are enabled
+		and there is no publicPath defined then lets turn convertToAbsoluteUrls
+		on by default.  Otherwise default to the convertToAbsoluteUrls option
+		directly
+	*/
+	var autoFixUrls = options.convertToAbsoluteUrls === undefined && sourceMap;
+
+	if (options.convertToAbsoluteUrls || autoFixUrls) {
+		css = fixUrls(css);
+	}
+
+	if (sourceMap) {
+		// http://stackoverflow.com/a/26603875
+		css += "\n/*# sourceMappingURL=data:application/json;base64," + btoa(unescape(encodeURIComponent(JSON.stringify(sourceMap)))) + " */";
+	}
+
+	var blob = new Blob([css], { type: "text/css" });
+
+	var oldSrc = link.href;
+
+	link.href = URL.createObjectURL(blob);
+
+	if(oldSrc) URL.revokeObjectURL(oldSrc);
+}
+
+
+/***/ }),
+
+/***/ "./node_modules/style-loader/lib/urls.js":
+/*!***********************************************!*\
+  !*** ./node_modules/style-loader/lib/urls.js ***!
+  \***********************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+
+/**
+ * When source maps are enabled, `style-loader` uses a link element with a data-uri to
+ * embed the css on the page. This breaks all relative urls because now they are relative to a
+ * bundle instead of the current page.
+ *
+ * One solution is to only use full urls, but that may be impossible.
+ *
+ * Instead, this function "fixes" the relative urls to be absolute according to the current page location.
+ *
+ * A rudimentary test suite is located at `test/fixUrls.js` and can be run via the `npm test` command.
+ *
+ */
+
+module.exports = function (css) {
+  // get current location
+  var location = typeof window !== "undefined" && window.location;
+
+  if (!location) {
+    throw new Error("fixUrls requires window.location");
+  }
+
+	// blank or null?
+	if (!css || typeof css !== "string") {
+	  return css;
+  }
+
+  var baseUrl = location.protocol + "//" + location.host;
+  var currentDir = baseUrl + location.pathname.replace(/\/[^\/]*$/, "/");
+
+	// convert each url(...)
+	/*
+	This regular expression is just a way to recursively match brackets within
+	a string.
+
+	 /url\s*\(  = Match on the word "url" with any whitespace after it and then a parens
+	   (  = Start a capturing group
+	     (?:  = Start a non-capturing group
+	         [^)(]  = Match anything that isn't a parentheses
+	         |  = OR
+	         \(  = Match a start parentheses
+	             (?:  = Start another non-capturing groups
+	                 [^)(]+  = Match anything that isn't a parentheses
+	                 |  = OR
+	                 \(  = Match a start parentheses
+	                     [^)(]*  = Match anything that isn't a parentheses
+	                 \)  = Match a end parentheses
+	             )  = End Group
+              *\) = Match anything and then a close parens
+          )  = Close non-capturing group
+          *  = Match anything
+       )  = Close capturing group
+	 \)  = Match a close parens
+
+	 /gi  = Get all matches, not the first.  Be case insensitive.
+	 */
+	var fixedCss = css.replace(/url\s*\(((?:[^)(]|\((?:[^)(]+|\([^)(]*\))*\))*)\)/gi, function(fullMatch, origUrl) {
+		// strip quotes (if they exist)
+		var unquotedOrigUrl = origUrl
+			.trim()
+			.replace(/^"(.*)"$/, function(o, $1){ return $1; })
+			.replace(/^'(.*)'$/, function(o, $1){ return $1; });
+
+		// already a full url? no change
+		if (/^(#|data:|http:\/\/|https:\/\/|file:\/\/\/|\s*$)/i.test(unquotedOrigUrl)) {
+		  return fullMatch;
+		}
+
+		// convert the url to a full url
+		var newUrl;
+
+		if (unquotedOrigUrl.indexOf("//") === 0) {
+		  	//TODO: should we add protocol?
+			newUrl = unquotedOrigUrl;
+		} else if (unquotedOrigUrl.indexOf("/") === 0) {
+			// path should be relative to the base url
+			newUrl = baseUrl + unquotedOrigUrl; // already starts with '/'
+		} else {
+			// path should be relative to current directory
+			newUrl = currentDir + unquotedOrigUrl.replace(/^\.\//, ""); // Strip leading './'
+		}
+
+		// send back the fixed url(...)
+		return "url(" + JSON.stringify(newUrl) + ")";
+	});
+
+	// send back the fixed css
+	return fixedCss;
+};
+
+
+/***/ }),
+
 /***/ "./node_modules/timers-browserify/main.js":
 /*!************************************************!*\
   !*** ./node_modules/timers-browserify/main.js ***!
@@ -70918,6 +71755,702 @@ __webpack_require__.r(__webpack_exports__);
     },
 });
 
+
+
+/***/ }),
+
+/***/ "./node_modules/vue-loader/lib/index.js?!./node_modules/@caohenghu/vue-colorpicker/src/vue/Color.vue?vue&type=script&lang=js&":
+/*!**********************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib??vue-loader-options!./node_modules/@caohenghu/vue-colorpicker/src/vue/Color.vue?vue&type=script&lang=js& ***!
+  \**********************************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _img_sucker_png__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../img/sucker.png */ "./node_modules/@caohenghu/vue-colorpicker/src/img/sucker.png");
+/* harmony import */ var _img_sucker_png__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_img_sucker_png__WEBPACK_IMPORTED_MODULE_0__);
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+    props: {
+        color: {
+            type: String,
+            default: '#000000'
+        },
+        theme: {
+            type: String,
+            default: 'dark'
+        },
+        suckerHide: {
+            type: Boolean,
+            default: true
+        },
+        suckerCanvas: {
+            type: null, // HTMLCanvasElement
+            default: null
+        },
+        suckerArea: {
+            type: Array,
+            default: () => []
+        },
+        colorsDefault: {
+            type: Array,
+            default: () => [
+                '#000000', '#FFFFFF', '#FF1900', '#F47365', '#FFB243', '#FFE623', '#6EFF2A', '#1BC7B1',
+                '#00BEFF', '#2E81FF', '#5D61FF', '#FF89CF', '#FC3CAD', '#BF3DCE', '#8E00A7', 'rgba(0,0,0,0)'
+            ]
+        },
+        colorsHistoryKey: {
+            type: String,
+            default: 'vue-colorpicker-history'
+        }
+    },
+    data() {
+        return {
+            slideSaturationStyle: {},
+            slideHueStyle: {},
+            slideAlphaStyle: {},
+            hueWidth: 15,
+            hueHeight: 152,
+            alphaSize: 5,
+            selectedColorHeight: 30,
+            isOpenSucker: false, // 是否处于吸管状态
+            suckerPreview: null, // 吸管旁边的预览颜色
+            isSucking: false, // 是否处于吸管等待状态
+            imgAlphaBase64: '', // 用来作背景的马赛克图片
+            modelRgba: '',
+            modelHex: '',
+            r: 0,
+            g: 0,
+            b: 0,
+            a: 1,
+            h: 0,
+            s: 0,
+            v: 0,
+            colorsHistory: JSON.parse(localStorage.getItem(this.colorsHistoryKey)) || [],
+            colorSelected: '' // 改变了颜色才有值
+        }
+    },
+    computed: {
+        isLightTheme() {
+            return this.theme === 'light'
+        },
+        totalWidth() {
+            return this.hueHeight + (this.hueWidth + 8) * 2
+        },
+        rgba() {
+            return {
+                r: this.r,
+                g: this.g,
+                b: this.b,
+                a: this.a,
+                toRgbString: () => `rgb(${[this.r, this.g, this.b].join(',')})`,
+                toRgbaStringShort: () => `${[this.r, this.g, this.b, this.a].join(',')}`,
+                toRgbaString: () => `rgba(${this.rgba.toRgbaStringShort()})`,
+                toHexString: () => this.rgb2hex(this.rgba, true)
+            }
+        },
+        hsv() {
+            return {
+                h: this.h,
+                s: this.s,
+                v: this.v
+            }
+        }
+    },
+    watch: {
+        rgba() {
+            this.$emit('changeColor', {
+                rgba: this.rgba,
+                hsv: this.hsv
+            })
+        },
+        suckerCanvas(newVal) {
+            this.isSucking = false
+            this.suckColor(newVal)
+            newVal.style.cursor = `url(${_img_sucker_png__WEBPACK_IMPORTED_MODULE_0___default.a}) 0 32, default`
+        }
+    },
+    created() {
+        this.setColorValue(this.color)
+        this.setColorPos()
+        this.modelHex = this.rgba.toHexString()
+        this.modelRgba = this.rgba.toRgbaStringShort()
+        this.imgAlphaBase64 = this.createAlphaSquare(4).toDataURL()
+    },
+    mounted() {
+        this.renderHue(this.$refs.canvasHue, this.hueWidth, this.hueHeight)
+        this.renderSaturation(this.$refs.canvasSaturation, this.rgba.toRgbString(), this.hueHeight)
+        this.renderAlpha(this.$refs.canvasAlpha, this.hueWidth, this.hueHeight, this.alphaSize, this.rgba.toRgbString())
+        this.renderColor(this.$refs.canvasColor, this.totalWidth - this.selectedColorHeight, this.selectedColorHeight, this.alphaSize)
+    },
+    destroyed() {
+        this.setcolorsHistory(this.colorSelected)
+    },
+    methods: {
+        keydownHandler(e) {
+            if (e.keyCode === 27) { // esc
+                this.isOpenSucker = !this.isOpenSucker
+                this.isSucking = false
+                this.$emit('openSucker', this.isOpenSucker)
+                document.removeEventListener('keydown', this.keydownHandler)
+                document.removeEventListener('mousemove', this.mousemoveHandler)
+                document.removeEventListener('mouseup', this.mousemoveHandler)
+                if (this.suckerPreview) {
+                    document.body.removeChild(this.suckerPreview)
+                    this.suckerPreview = null
+                }
+            }
+        },
+        mousemoveHandler(e) {
+            const {clientX, clientY} = e
+            const { top: domTop, left: domLeft, width, height } = this.suckerCanvas.getBoundingClientRect()
+            const x = clientX - domLeft
+            const y = clientY - domTop
+            const ctx = this.suckerCanvas.getContext('2d')
+            const imgData = ctx.getImageData(Math.min(x, width - 1), Math.min(y, height - 1), 1, 1)
+            let [r, g, b, a] = imgData.data
+            a = parseFloat((a / 255).toFixed(2))
+            const style = this.suckerPreview.style
+            Object.assign(style, {
+                position: 'absolute',
+                left: clientX + 20 + 'px',
+                top: clientY - 36 + 'px',
+                width: '24px',
+                height: '24px',
+                borderRadius: '50%',
+                border: '2px solid #fff',
+                boxShadow: '0 0 8px 0 rgba(0, 0, 0, 0.16)',
+                background: `rgba(${[r, g, b, a].join(',')})`,
+                zIndex: 95 // 吸管的小圆圈预览色的层级不能超过颜色选择器
+            })
+            if (clientX >= this.suckerArea[0] && clientY >= this.suckerArea[1] && clientX <= this.suckerArea[2] && clientY <= this.suckerArea[3]) {
+                style.display = ''
+            } else {
+                style.display = 'none'
+            }
+        },
+        openSucker() {
+            // 和上面的代码一样，所以直接调用同一个方法
+            this.keydownHandler({keyCode: 27})
+
+            if (this.isOpenSucker) {
+                this.isSucking = true
+                document.addEventListener('keydown', this.keydownHandler)
+            }
+        },
+        inputColor(e) {
+            this.setColorValue(e.target.value)
+            this.setColorPos()
+            this.renderSaturation(this.$refs.canvasSaturation, this.rgba.toRgbString(), this.hueHeight)
+            this.renderAlpha(this.$refs.canvasAlpha, this.hueWidth, this.hueHeight, this.alphaSize, this.rgba.toRgbString())
+            this.colorSelected = this.rgba.toRgbaString()
+        },
+        setcolorsHistory(color) {
+            if (!color) {
+                return
+            }
+            const colors = this.colorsHistory
+            const index = colors.indexOf(color)
+            if (index >= 0) {
+                colors.splice(index, 1)
+            }
+            if (colors.length >= 8) {
+                colors.length = 7
+            }
+            colors.unshift(color)
+            this.colorsHistory = colors
+            localStorage.setItem(this.colorsHistoryKey, JSON.stringify(colors))
+        },
+        setColorValue(color) {
+            let rgba = {r: 0, g: 0, b: 0, a: 1}
+            if (/#/.test(color)) {
+                rgba = this.hex2rgba(color)
+            } else if (/rgb/.test(color)) {
+                rgba = this.rgb2rgba(color)
+            } else if (Object.prototype.toString.call(color) === '[object Object]') {
+                rgba = color
+            }
+            const {r, g, b, a} = rgba
+            this.r = r
+            this.g = g
+            this.b = b
+            this.a = a || a === 0 ? a : 1
+            const {h, s, v} = this.rgb2hsv(this.rgba)
+            this.h = h
+            this.s = s
+            this.v = v
+        },
+        setColorPos() {
+            this.slideSaturationStyle = {
+                left: this.s * this.hueHeight - 5 + 'px',
+                top: (1 - this.v) * this.hueHeight - 5 + 'px'
+            }
+            this.slideHueStyle = {
+                top: (1 - this.h / 360) * this.hueHeight - 2 + 'px'
+            }
+            this.slideAlphaStyle = {
+                top: this.a * this.hueHeight - 2 + 'px'
+            }
+        },
+        selectColor(color) {
+            this.setColorValue(color)
+            this.setColorPos()
+            this.renderSaturation(this.$refs.canvasSaturation, this.rgba.toRgbString(), this.hueHeight)
+            this.renderAlpha(this.$refs.canvasAlpha, this.hueWidth, this.hueHeight, this.alphaSize, this.rgba.toRgbString())
+            this.modelHex = this.rgba.toHexString()
+            this.modelRgba = this.rgba.toRgbaStringShort()
+            this.colorSelected = this.rgba.toRgbaString()
+        },
+        selectSaturation(e) {
+            e.preventDefault()
+            e.stopPropagation()
+            const { top: saturationTop, left: saturationLeft } = this.$refs.saturation.getBoundingClientRect()
+            const ctx = e.target.getContext('2d')
+
+            const mousemove = e => {
+                let x = e.clientX - saturationLeft
+                let y = e.clientY - saturationTop
+
+                if (x < 0) {
+                    x = 0
+                }
+                if (y < 0) {
+                    y = 0
+                }
+                if (x > this.hueHeight) {
+                    x = this.hueHeight
+                }
+                if (y > this.hueHeight) {
+                    y = this.hueHeight
+                }
+
+                this.slideSaturationStyle = {
+                    left: x - 5 + 'px',
+                    top: y - 5 + 'px'
+                }
+                // 如果用最大值，选择的像素会是空的，空的默认是黑色
+                const imgData = ctx.getImageData(Math.min(x, this.hueHeight - 1), Math.min(y, this.hueHeight - 1), 1, 1)
+                const [r, g, b] = imgData.data
+                this.setColorValue({r, g, b})
+                this.renderAlpha(this.$refs.canvasAlpha, this.hueWidth, this.hueHeight, this.alphaSize, this.rgba.toRgbString())
+                this.modelHex = this.rgba.toHexString()
+                this.modelRgba = this.rgba.toRgbaStringShort()
+            }
+
+            mousemove(e)
+
+            const mouseup = () => {
+                document.removeEventListener('mousemove', mousemove)
+                document.removeEventListener('mouseup', mouseup)
+                this.colorSelected = this.rgba.toRgbaString()
+            }
+
+            document.addEventListener('mousemove', mousemove)
+            document.addEventListener('mouseup', mouseup)
+        },
+        selectHue(e) {
+            e.preventDefault()
+            e.stopPropagation()
+            const { top: hueTop } = this.$refs.hue.getBoundingClientRect()
+            const ctx = e.target.getContext('2d')
+
+            const mousemove = e => {
+                let y = e.clientY - hueTop
+
+                if (y < 0) {
+                    y = 0
+                }
+                if (y > this.hueHeight) {
+                    y = this.hueHeight
+                }
+
+                this.slideHueStyle = {
+                    top: y - 2 + 'px'
+                }
+                this.slideSaturationStyle = {
+                    left: this.hueHeight - 5 + 'px',
+                    top: 0 - 5 + 'px'
+                }
+                // 如果用最大值，选择的像素会是空的，空的默认是黑色
+                const imgData = ctx.getImageData(0, Math.min(y, this.hueHeight - 1), 1, 1)
+                const [r, g, b] = imgData.data
+                this.setColorValue({r, g, b})
+                this.renderSaturation(this.$refs.canvasSaturation, this.rgba.toRgbString(), this.hueHeight)
+                this.renderAlpha(this.$refs.canvasAlpha, this.hueWidth, this.hueHeight, this.alphaSize, this.rgba.toRgbString())
+                this.modelHex = this.rgba.toHexString()
+                this.modelRgba = this.rgba.toRgbaStringShort()
+                this.colorSelected = this.rgba.toRgbaString()
+            }
+
+            mousemove(e)
+
+            const mouseup = () => {
+                document.removeEventListener('mousemove', mousemove)
+                document.removeEventListener('mouseup', mouseup)
+            }
+
+            document.addEventListener('mousemove', mousemove)
+            document.addEventListener('mouseup', mouseup)
+        },
+        selectAlpha(e) {
+            e.preventDefault()
+            e.stopPropagation()
+            const { top: hueTop } = this.$refs.alpha.getBoundingClientRect()
+
+            const mousemove = e => {
+                let y = e.clientY - hueTop
+
+                if (y < 0) {
+                    y = 0
+                }
+                if (y > this.hueHeight) {
+                    y = this.hueHeight
+                }
+
+                this.slideAlphaStyle = {
+                    top: y - 2 + 'px'
+                }
+
+                this.a = parseFloat((y / this.hueHeight).toFixed(2))
+                this.modelHex = this.rgba.toHexString()
+                this.modelRgba = this.rgba.toRgbaStringShort()
+                this.colorSelected = this.rgba.toRgbaString()
+            }
+
+            mousemove(e)
+
+            const mouseup = () => {
+                document.removeEventListener('mousemove', mousemove)
+                document.removeEventListener('mouseup', mouseup)
+            }
+
+            document.addEventListener('mousemove', mousemove)
+            document.addEventListener('mouseup', mouseup)
+        },
+        suckColor(dom) {
+            if (dom && dom.tagName !== 'CANVAS') {
+                return
+            }
+
+            this.suckerPreview = document.createElement('div')
+            document.body.appendChild(this.suckerPreview)
+
+            document.addEventListener('mousemove', this.mousemoveHandler)
+            document.addEventListener('mouseup', this.mousemoveHandler)
+
+            dom.addEventListener('click', e => {
+                const {clientX, clientY} = e
+                const { top, left, width, height } = dom.getBoundingClientRect()
+                const x = clientX - left
+                const y = clientY - top
+                const ctx = dom.getContext('2d')
+                const imgData = ctx.getImageData(Math.min(x, width - 1), Math.min(y, height - 1), 1, 1)
+                let [r, g, b, a] = imgData.data
+                a = parseFloat((a / 255).toFixed(2))
+                this.setColorValue({r, g, b, a})
+                this.setColorPos()
+                this.renderSaturation(this.$refs.canvasSaturation, this.rgba.toRgbString(), this.hueHeight)
+                this.renderAlpha(this.$refs.canvasAlpha, this.hueWidth, this.hueHeight, this.alphaSize, this.rgba.toRgbString())
+                this.modelHex = this.rgba.toHexString()
+                this.modelRgba = this.rgba.toRgbaStringShort()
+                this.colorSelected = this.rgba.toRgbaString()
+            })
+        },
+        renderSaturation(canvas, color, size) {
+            const ctx = canvas.getContext('2d')
+            canvas.width = size
+            canvas.height = size
+
+            ctx.fillStyle = color
+            ctx.fillRect(0, 0, size, size)
+
+            this.createLinearGradient('l', ctx, size, size, '#FFFFFF', 'rgba(255,255,255,0)')
+            this.createLinearGradient('p', ctx, size, size, 'rgba(0,0,0,0)', '#000000')
+        },
+        renderHue(canvas, width, height) {
+            const ctx = canvas.getContext('2d')
+            canvas.width = width
+            canvas.height = height
+
+            const gradient = ctx.createLinearGradient(0, 0, 0, height)
+            gradient.addColorStop(0, '#FF0000') // 红
+            gradient.addColorStop(0.17 * 1, '#FF00FF') // 紫
+            gradient.addColorStop(0.17 * 2, '#0000FF') // 蓝
+            gradient.addColorStop(0.17 * 3, '#00FFFF') // 青
+            gradient.addColorStop(0.17 * 4, '#00FF00') // 绿
+            gradient.addColorStop(0.17 * 5, '#FFFF00') // 黄
+            gradient.addColorStop(1, '#FF0000') // 红
+            ctx.fillStyle = gradient
+            ctx.fillRect(0, 0, width, height)
+        },
+        renderAlpha(canvas, width, height, size, color) {
+            const canvasSquare = this.createAlphaSquare(size)
+
+            const ctx = canvas.getContext('2d')
+            canvas.width = width
+            canvas.height = height
+
+            ctx.fillStyle = ctx.createPattern(canvasSquare, 'repeat')
+            ctx.fillRect(0, 0, width, height)
+
+            this.createLinearGradient('p', ctx, width, height, 'rgba(255,255,255,0)', color)
+        },
+        renderColor(canvas, width, height, size) {
+            const canvasSquare = this.createAlphaSquare(size)
+
+            const ctx = canvas.getContext('2d')
+            canvas.width = width
+            canvas.height = height
+
+            ctx.fillStyle = ctx.createPattern(canvasSquare, 'repeat')
+            ctx.fillRect(0, 0, width, height)
+        },
+        createAlphaSquare(size) {
+            const canvas = document.createElement('canvas')
+            const ctx = canvas.getContext('2d')
+            const doubleSize = size * 2
+            canvas.width = doubleSize
+            canvas.height = doubleSize
+
+            ctx.fillStyle = '#ffffff'
+            ctx.fillRect(0, 0, doubleSize, doubleSize)
+            ctx.fillStyle = '#ccd5db'
+            ctx.fillRect(0, 0, size, size)
+            ctx.fillRect(size, size, size, size)
+
+            return canvas
+        },
+        createLinearGradient(direction, ctx, width, height, color1, color2) {
+            // l 横向 p 纵向
+            const isL = direction === 'l'
+            const gradient = ctx.createLinearGradient(0, 0, isL ? width : 0, isL ? 0 : height)
+            gradient.addColorStop(0.01, color1)
+            gradient.addColorStop(0.99, color2)
+            ctx.fillStyle = gradient
+            ctx.fillRect(0, 0, width, height)
+        },
+        rgb2hex({r, g, b}, toUpper) {
+            const change = val => ('0' + Number(val).toString(16)).slice(-2)
+            const color = `#${change(r)}${change(g)}${change(b)}`
+            return toUpper ? color.toUpperCase() : color
+        },
+        hex2rgba(hex) {
+            hex = hex.slice(1)
+            const change = val => parseInt(val, 16) || 0 // 避免NaN的情况
+            return {
+                r: change(hex.slice(0, 2)),
+                g: change(hex.slice(2, 4)),
+                b: change(hex.slice(4, 6)),
+                a: 1
+            }
+        },
+        rgb2rgba(rgba) {
+            if (typeof rgba === 'string') {
+                rgba = (/rgba?\((.*?)\)/.exec(rgba) || ['', '0,0,0,1'])[1].split(',')
+                return {
+                    r: Number(rgba[0]) || 0,
+                    g: Number(rgba[1]) || 0,
+                    b: Number(rgba[2]) || 0,
+                    a: Number(rgba[3] ? rgba[3] : 1) // 避免为0的情况
+                }
+            } else {
+                return rgba
+            }
+        },
+        rgb2hsv({r, g, b}) {
+            r = r / 255
+            g = g / 255
+            b = b / 255
+            const max = Math.max(r, g, b)
+            const min = Math.min(r, g, b)
+            const delta = max - min
+            let h = 0
+            if (max === min) {
+                h = 0
+            } else if (max === r) {
+                if (g >= b) {
+                    h = 60 * (g - b) / delta
+                } else {
+                    h = 60 * (g - b) / delta + 360
+                }
+            } else if (max === g) {
+                h = 60 * (b - r) / delta + 120
+            } else if (max === b) {
+                h = 60 * (r - g) / delta + 240
+            }
+            h = Math.floor(h)
+            let s = parseFloat((max === 0 ? 0 : 1 - min / max).toFixed(2))
+            let v = parseFloat(max.toFixed(2))
+            return {h, s, v}
+        }
+    }
+});
 
 
 /***/ }),
@@ -71148,6 +72681,297 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./node_modules/@caohenghu/vue-colorpicker/src/vue/Color.vue?vue&type=template&id=e7d88394&":
+/*!********************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./node_modules/@caohenghu/vue-colorpicker/src/vue/Color.vue?vue&type=template&id=e7d88394& ***!
+  \********************************************************************************************************************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c(
+    "div",
+    {
+      staticClass: "hu-color-picker",
+      class: { light: _vm.isLightTheme },
+      style: { width: _vm.totalWidth + "px" }
+    },
+    [
+      _c("div", { staticClass: "color-set" }, [
+        _c(
+          "div",
+          {
+            ref: "saturation",
+            staticClass: "saturation",
+            on: { mousedown: _vm.selectSaturation }
+          },
+          [
+            _c("canvas", { ref: "canvasSaturation" }),
+            _vm._v(" "),
+            _c("div", { staticClass: "slide", style: _vm.slideSaturationStyle })
+          ]
+        ),
+        _vm._v(" "),
+        _c(
+          "div",
+          { ref: "hue", staticClass: "hue", on: { mousedown: _vm.selectHue } },
+          [
+            _c("canvas", { ref: "canvasHue" }),
+            _vm._v(" "),
+            _c("div", { staticClass: "slide", style: _vm.slideHueStyle })
+          ]
+        ),
+        _vm._v(" "),
+        _c(
+          "div",
+          {
+            ref: "alpha",
+            staticClass: "alpha",
+            on: { mousedown: _vm.selectAlpha }
+          },
+          [
+            _c("canvas", { ref: "canvasAlpha" }),
+            _vm._v(" "),
+            _c("div", { staticClass: "slide", style: _vm.slideAlphaStyle })
+          ]
+        )
+      ]),
+      _vm._v(" "),
+      _c(
+        "div",
+        {
+          staticClass: "color-show",
+          style: { height: _vm.selectedColorHeight + "px" }
+        },
+        [
+          _c("div", { staticClass: "show" }, [
+            _c("canvas", { ref: "canvasColor" }),
+            _vm._v(" "),
+            _c("div", {
+              staticClass: "color",
+              style: { background: _vm.rgba.toRgbaString() }
+            })
+          ]),
+          _vm._v(" "),
+          !_vm.suckerHide && !_vm.isSucking
+            ? _c(
+                "svg",
+                {
+                  staticClass: "sucker",
+                  class: { active: _vm.isOpenSucker },
+                  attrs: {
+                    xmlns: "http://www.w3.org/2000/svg",
+                    viewBox: "-12 -12 48 48"
+                  },
+                  on: { click: _vm.openSucker }
+                },
+                [
+                  _c("path", {
+                    attrs: {
+                      d:
+                        "M13.1,8.2l5.6,5.6c0.4,0.4,0.5,1.1,0.1,1.5s-1.1,0.5-1.5,0.1c0,0-0.1,0-0.1-0.1l-1.4-1.4l-7.7,7.7C7.9,21.9,7.6,22,7.3,22H3.1C2.5,22,2,21.5,2,20.9l0,0v-4.2c0-0.3,0.1-0.6,0.3-0.8l5.8-5.8C8.5,9.7,9.2,9.6,9.7,10s0.5,1.1,0.1,1.5c0,0,0,0.1-0.1,0.1l-5.5,5.5v2.7h2.7l7.4-7.4L8.7,6.8c-0.5-0.4-0.5-1-0.1-1.5s1.1-0.5,1.5-0.1c0,0,0.1,0,0.1,0.1l1.4,1.4l3.5-3.5c1.6-1.6,4.1-1.6,5.8-0.1c1.6,1.6,1.6,4.1,0.1,5.8L20.9,9l-3.6,3.6c-0.4,0.4-1.1,0.5-1.5,0.1"
+                    }
+                  })
+                ]
+              )
+            : _vm._e(),
+          _vm._v(" "),
+          !_vm.suckerHide && _vm.isSucking
+            ? _c(
+                "svg",
+                {
+                  staticClass: "sucker",
+                  attrs: {
+                    viewBox: "-16 -16 68 68",
+                    xmlns: "http://www.w3.org/2000/svg",
+                    stroke: "#9099a4"
+                  }
+                },
+                [
+                  _c("g", { attrs: { fill: "none", "fill-rule": "evenodd" } }, [
+                    _c(
+                      "g",
+                      {
+                        attrs: {
+                          transform: "translate(1 1)",
+                          "stroke-width": "4"
+                        }
+                      },
+                      [
+                        _c("circle", {
+                          attrs: {
+                            "stroke-opacity": ".5",
+                            cx: "18",
+                            cy: "18",
+                            r: "18"
+                          }
+                        }),
+                        _vm._v(" "),
+                        _c(
+                          "path",
+                          { attrs: { d: "M36 18c0-9.94-8.06-18-18-18" } },
+                          [
+                            _c("animateTransform", {
+                              attrs: {
+                                attributeName: "transform",
+                                type: "rotate",
+                                from: "0 18 18",
+                                to: "360 18 18",
+                                dur: "1s",
+                                repeatCount: "indefinite"
+                              }
+                            })
+                          ],
+                          1
+                        )
+                      ]
+                    )
+                  ])
+                ]
+              )
+            : _vm._e()
+        ]
+      ),
+      _vm._v(" "),
+      _c("div", { staticClass: "color-type" }, [
+        _c("div", { staticClass: "name" }, [
+          _vm._v("\n            HEX\n        ")
+        ]),
+        _vm._v(" "),
+        _c("input", {
+          directives: [
+            {
+              name: "model",
+              rawName: "v-model",
+              value: _vm.modelHex,
+              expression: "modelHex"
+            }
+          ],
+          staticClass: "value",
+          style: { width: _vm.totalWidth - 60 + "px" },
+          domProps: { value: _vm.modelHex },
+          on: {
+            input: [
+              function($event) {
+                if ($event.target.composing) {
+                  return
+                }
+                _vm.modelHex = $event.target.value
+              },
+              _vm.inputColor
+            ]
+          }
+        })
+      ]),
+      _vm._v(" "),
+      _c("div", { staticClass: "color-type" }, [
+        _c("div", { staticClass: "name" }, [
+          _vm._v("\n            RGBA\n        ")
+        ]),
+        _vm._v(" "),
+        _c("input", {
+          directives: [
+            {
+              name: "model",
+              rawName: "v-model",
+              value: _vm.modelRgba,
+              expression: "modelRgba"
+            }
+          ],
+          staticClass: "value",
+          style: { width: _vm.totalWidth - 60 + "px" },
+          domProps: { value: _vm.modelRgba },
+          on: {
+            input: [
+              function($event) {
+                if ($event.target.composing) {
+                  return
+                }
+                _vm.modelRgba = $event.target.value
+              },
+              _vm.inputColor
+            ]
+          }
+        })
+      ]),
+      _vm._v(" "),
+      _c(
+        "ul",
+        { staticClass: "colors" },
+        _vm._l(_vm.colorsDefault, function(item) {
+          return _c(
+            "li",
+            {
+              key: item,
+              staticClass: "item",
+              on: {
+                click: function($event) {
+                  _vm.selectColor(item)
+                }
+              }
+            },
+            [
+              _c("div", {
+                staticClass: "alpha",
+                style: { background: "url(" + _vm.imgAlphaBase64 + ")" }
+              }),
+              _vm._v(" "),
+              _c("div", { staticClass: "color", style: { background: item } })
+            ]
+          )
+        }),
+        0
+      ),
+      _vm._v(" "),
+      _vm.colorsHistory.length
+        ? _c(
+            "ul",
+            { staticClass: "colors history" },
+            _vm._l(_vm.colorsHistory, function(item) {
+              return _c(
+                "li",
+                {
+                  key: item,
+                  staticClass: "item",
+                  on: {
+                    click: function($event) {
+                      _vm.selectColor(item)
+                    }
+                  }
+                },
+                [
+                  _c("div", {
+                    staticClass: "alpha",
+                    style: { background: "url(" + _vm.imgAlphaBase64 + ")" }
+                  }),
+                  _vm._v(" "),
+                  _c("div", {
+                    staticClass: "color",
+                    style: { background: item }
+                  })
+                ]
+              )
+            }),
+            0
+          )
+        : _vm._e()
+    ]
+  )
+}
+var staticRenderFns = []
+render._withStripped = true
+
+
+
+/***/ }),
+
 /***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./node_modules/vue-full-calendar/components/FullCalendar.vue?vue&type=template&id=2cd98c15&":
 /*!*********************************************************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./node_modules/vue-full-calendar/components/FullCalendar.vue?vue&type=template&id=2cd98c15& ***!
@@ -71164,6 +72988,32 @@ var render = function() {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c("div", { ref: "calendar", attrs: { id: "calendar" } })
+}
+var staticRenderFns = []
+render._withStripped = true
+
+
+
+/***/ }),
+
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/Calendar.vue?vue&type=template&id=052a41a9&scoped=true&":
+/*!***********************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/Calendar.vue?vue&type=template&id=052a41a9&scoped=true& ***!
+  \***********************************************************************************************************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c("full-calendar", {
+    attrs: { config: this.config, events: JSON.parse(this.events) }
+  })
 }
 var staticRenderFns = []
 render._withStripped = true
@@ -83941,6 +85791,7 @@ module.exports = function(module) {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var vuejs_datepicker__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vuejs-datepicker */ "./node_modules/vuejs-datepicker/dist/vuejs-datepicker.esm.js");
 /* harmony import */ var vue_full_calendar__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! vue-full-calendar */ "./node_modules/vue-full-calendar/index.js");
+/* harmony import */ var _caohenghu_vue_colorpicker__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @caohenghu/vue-colorpicker */ "./node_modules/@caohenghu/vue-colorpicker/src/vue/main.js");
 /**
  * First we will load all of this project's JavaScript dependencies which
  * includes Vue and other libraries. It is a great starting point when
@@ -83951,7 +85802,9 @@ __webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
 window.Vue = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.common.js");
 
 
+
 Vue.use(vue_full_calendar__WEBPACK_IMPORTED_MODULE_1__["default"]);
+Vue.component('calendar', __webpack_require__(/*! ./components/Calendar.vue */ "./resources/js/components/Calendar.vue").default);
 /**
  * The following block of code may be used to automatically register your
  * Vue components. It will recursively scan this directory for the Vue
@@ -83971,11 +85824,13 @@ Vue.use(vue_full_calendar__WEBPACK_IMPORTED_MODULE_1__["default"]);
 var app = new Vue({
   el: '#app',
   components: {
-    Datepicker: vuejs_datepicker__WEBPACK_IMPORTED_MODULE_0__["default"]
+    Datepicker: vuejs_datepicker__WEBPACK_IMPORTED_MODULE_0__["default"],
+    colorPicker: _caohenghu_vue_colorpicker__WEBPACK_IMPORTED_MODULE_2__["default"]
   },
   data: function data() {
     return {
       config: {
+        defaultView: 'month',
         firstDay: 1
       }
     };
@@ -84039,6 +85894,93 @@ if (token) {
 //     cluster: process.env.MIX_PUSHER_APP_CLUSTER,
 //     encrypted: true
 // });
+
+/***/ }),
+
+/***/ "./resources/js/components/Calendar.vue":
+/*!**********************************************!*\
+  !*** ./resources/js/components/Calendar.vue ***!
+  \**********************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _Calendar_vue_vue_type_template_id_052a41a9_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Calendar.vue?vue&type=template&id=052a41a9&scoped=true& */ "./resources/js/components/Calendar.vue?vue&type=template&id=052a41a9&scoped=true&");
+/* harmony import */ var _Calendar_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Calendar.vue?vue&type=script&lang=js& */ "./resources/js/components/Calendar.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport *//* harmony import */ var _Calendar_vue_vue_type_style_index_0_id_052a41a9_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Calendar.vue?vue&type=style&index=0&id=052a41a9&scoped=true&lang=css& */ "./resources/js/components/Calendar.vue?vue&type=style&index=0&id=052a41a9&scoped=true&lang=css&");
+/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+
+/* normalize component */
+
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_3__["default"])(
+  _Calendar_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _Calendar_vue_vue_type_template_id_052a41a9_scoped_true___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _Calendar_vue_vue_type_template_id_052a41a9_scoped_true___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  "052a41a9",
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/components/Calendar.vue"
+/* harmony default export */ __webpack_exports__["default"] = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/js/components/Calendar.vue?vue&type=script&lang=js&":
+/*!***********************************************************************!*\
+  !*** ./resources/js/components/Calendar.vue?vue&type=script&lang=js& ***!
+  \***********************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Calendar_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/babel-loader/lib??ref--4-0!../../../node_modules/vue-loader/lib??vue-loader-options!./Calendar.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/Calendar.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Calendar_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
+/***/ "./resources/js/components/Calendar.vue?vue&type=style&index=0&id=052a41a9&scoped=true&lang=css&":
+/*!*******************************************************************************************************!*\
+  !*** ./resources/js/components/Calendar.vue?vue&type=style&index=0&id=052a41a9&scoped=true&lang=css& ***!
+  \*******************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_style_loader_index_js_node_modules_css_loader_index_js_ref_7_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_7_2_node_modules_vue_loader_lib_index_js_vue_loader_options_Calendar_vue_vue_type_style_index_0_id_052a41a9_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/style-loader!../../../node_modules/css-loader??ref--7-1!../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../node_modules/postcss-loader/src??ref--7-2!../../../node_modules/vue-loader/lib??vue-loader-options!./Calendar.vue?vue&type=style&index=0&id=052a41a9&scoped=true&lang=css& */ "./node_modules/style-loader/index.js!./node_modules/css-loader/index.js?!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/Calendar.vue?vue&type=style&index=0&id=052a41a9&scoped=true&lang=css&");
+/* harmony import */ var _node_modules_style_loader_index_js_node_modules_css_loader_index_js_ref_7_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_7_2_node_modules_vue_loader_lib_index_js_vue_loader_options_Calendar_vue_vue_type_style_index_0_id_052a41a9_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_index_js_node_modules_css_loader_index_js_ref_7_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_7_2_node_modules_vue_loader_lib_index_js_vue_loader_options_Calendar_vue_vue_type_style_index_0_id_052a41a9_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0__);
+/* harmony reexport (unknown) */ for(var __WEBPACK_IMPORT_KEY__ in _node_modules_style_loader_index_js_node_modules_css_loader_index_js_ref_7_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_7_2_node_modules_vue_loader_lib_index_js_vue_loader_options_Calendar_vue_vue_type_style_index_0_id_052a41a9_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0__) if(__WEBPACK_IMPORT_KEY__ !== 'default') (function(key) { __webpack_require__.d(__webpack_exports__, key, function() { return _node_modules_style_loader_index_js_node_modules_css_loader_index_js_ref_7_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_7_2_node_modules_vue_loader_lib_index_js_vue_loader_options_Calendar_vue_vue_type_style_index_0_id_052a41a9_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0__[key]; }) }(__WEBPACK_IMPORT_KEY__));
+ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_style_loader_index_js_node_modules_css_loader_index_js_ref_7_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_7_2_node_modules_vue_loader_lib_index_js_vue_loader_options_Calendar_vue_vue_type_style_index_0_id_052a41a9_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0___default.a); 
+
+/***/ }),
+
+/***/ "./resources/js/components/Calendar.vue?vue&type=template&id=052a41a9&scoped=true&":
+/*!*****************************************************************************************!*\
+  !*** ./resources/js/components/Calendar.vue?vue&type=template&id=052a41a9&scoped=true& ***!
+  \*****************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Calendar_vue_vue_type_template_id_052a41a9_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../node_modules/vue-loader/lib??vue-loader-options!./Calendar.vue?vue&type=template&id=052a41a9&scoped=true& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/Calendar.vue?vue&type=template&id=052a41a9&scoped=true&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Calendar_vue_vue_type_template_id_052a41a9_scoped_true___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Calendar_vue_vue_type_template_id_052a41a9_scoped_true___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+
+
 
 /***/ }),
 

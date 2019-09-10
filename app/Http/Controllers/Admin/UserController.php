@@ -121,7 +121,7 @@ class UserController extends Controller
             'middlename' => 'required|string',
             'nickname' => 'nullable|string',
             'lastname' => 'required|string',
-            'phone' => 'required|string',
+            'phone' => 'nullable|string',
             'birthdate' => 'required|string',
             'email' => 'nullable|email',
             'password' => 'nullable|confirmed',

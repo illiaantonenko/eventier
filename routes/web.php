@@ -11,9 +11,20 @@
 |
 */
 
+use Illuminate\Support\Facades\App;
+use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Session;
+
 Route::get('/', function () {
     return view('welcome');
 });
+
+// Localization
+Route::get('locale/{locale}', function ($locale){
+    Session::put('locale', $locale);
+    return redirect()->back();
+});
+// End localization
 
 //Auth::routes();
 
@@ -34,31 +45,34 @@ Route::get('email/resend', 'Auth\VerificationController@resend')->name('verifica
 
 
 // ADMIN ROUTES
-Route::group(['prefix'=>'/admin','namespace'=>'Admin','middleware'=>['auth','admin']],function (){
-    Route::get('/', function (){
-       return redirect('/admin/events/calendar');
+Route::group(['prefix' => '/admin', 'namespace' => 'Admin', 'middleware' => ['auth', 'admin']], function () {
+    Route::get('/', function () {
+        return redirect('/admin/events/calendar');
     });
 
-    Route::resource('news','NewsController');
-    Route::get('news/{news}/changestatus','NewsController@changestatus');
+    Route::resource('news', 'NewsController');
+    Route::get('news/{news}/changestatus', 'NewsController@changestatus');
 
-    Route::resource('absences','AbsenceController');
-    Route::get('/events/all','EventController@allEvents');
-    Route::get('/events/new','EventController@newEvents');
-    Route::get('/events/calendar','CalendarController@index');
+    Route::resource('absences', 'AbsenceController');
+    Route::get('/events/all', 'EventController@allEvents');
+    Route::get('/events/new', 'EventController@newEvents');
+    Route::get('/events/calendar', 'CalendarController@index');
 
-    Route::resource('events','EventController')->except('index');
-    Route::get('events/{event}/changestatus','EventController@changestatus');
+    Route::resource('events', 'EventController')->except('index');
+    Route::get('events/{event}/changestatus', 'EventController@changestatus');
 
-    Route::resource('users','UserController');
+    Route::resource('categories', 'CategoryController')->except('show');
 
-   //TODO: do same to users
+    Route::resource('users', 'UserController');
+
+    Route::resource('birthdays', 'BirthdayController')->except('show');
+
 });
 // ADMIN ROUTES END
 
 Route::get('/home', 'HomeController@index')->name('home')->middleware('auth');
 
-Route::group(['middleware'=>['auth','moderated','verified']],function (){
+Route::group(['middleware' => ['auth', 'moderated', 'verified']], function () {
 
 //    Route::get('/', function () {
 //        return redirect('/dashboard');
@@ -67,20 +81,20 @@ Route::group(['middleware'=>['auth','moderated','verified']],function (){
 //        return redirect('/dashboard');
 //    });
 
-    Route::group(['prefix'=>'/dashboard'],function (){
-        Route::get('/','DashboardController@index');
-        Route::resource('news','NewsController');
-        Route::resource('absences','AbsenceController');
-    });
+    Route::get('/test', 'DashboardController@test');
+    Route::get('/dashboard', 'DashboardController@index');
+    Route::resource('news', 'NewsController');
+    Route::resource('absences', 'AbsenceController');
 
-    Route::group(['prefix'=>'/user'],function () {
-        Route::get('/profile/my', 'ProfileController@myProfile');
+
+    Route::group(['prefix' => '/user'], function () {
+        Route::get('/profile/edit/{profile}', 'ProfileController@edit');
         Route::get('/profile/{profile}', 'ProfileController@show');
         Route::put('/profile/{profile}', 'ProfileController@update');
     });
 
-    Route::resource('events','EventController');
-    Route::get('/events/{event}/register','EventController@registerUserOnEvent');
-    Route::get('/events/confirm/{hash}','EventController@checkUserPresence')->middleware('eventOwner');
-    Route::get('/calendar','CalendarController@index');
+    Route::resource('events', 'EventController');
+    Route::get('/events/{event}/register', 'EventController@registerUserOnEvent');
+    Route::get('/events/confirm/{hash}', 'EventController@checkUserPresence')->middleware('eventOwner');
+    Route::get('/calendar', 'CalendarController@index');
 });

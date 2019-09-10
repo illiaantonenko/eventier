@@ -65,6 +65,7 @@
                             <span class="text-danger">{{$errors->get('hideyear')[0]}}</span>
                         @endif
                     </div>
+
                     <div class="form-group">
                         <label class="control-label" for="email">E-mail</label>
                         <input type="text" id="email" class="form-control" name="email" value="{{old('email')}}">

@@ -72,6 +72,7 @@
     @if (Route::has('login'))
         <div class="top-right links">
             @auth
+                <a href="{{ url('/') }}">{{ __('Back') }}</a>
                 <a href="{{ route('logout') }}"
                    onclick="event.preventDefault();
                    document.getElementById('logout-form').submit();">
@@ -86,16 +87,12 @@
 
     <div class="content">
         <div class="title m-b-md">
-            DevSup
+            {{ __('PNTU') }}
         </div>
 
         <div class="text">
             <p>
-                Thank you for registration!
-                Our Administrator will review your application.
-            </p>
-            <p>
-                You'll receive massage on your e-mail when moderation will be completed.
+                {{ __('messages.not-moderated') }}
             </p>
         </div>
     </div>

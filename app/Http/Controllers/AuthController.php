@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Profile;
 use App\Models\User;
+use Barryvdh\Debugbar\Facade;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
@@ -58,9 +59,9 @@ class AuthController extends Controller
                 'user_id'=>$user->id,
                 'firstname'=>$request->firstname,
                 'lastname'=>$request->lastname,
-                'middlename'=>$request->lastname,
-                'nickname'=>$request->lastname,
-                'birthdate'=>strtotime($request->lastname),
+                'middlename'=>$request->middlename,
+                'nickname'=>$request->nickname,
+                'birthdate'=>strtotime($request->birthdate),
                 'hideyear'=>'0',
             ]);
 

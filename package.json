@@ -25,6 +25,7 @@
         "vue-template-compiler": "^2.5.21"
     },
     "dependencies": {
+        "@caohenghu/vue-colorpicker": "^1.1.1",
         "arrobefr-jquery-calendar-bs4": "^1.0.3",
         "vue-full-calendar": "^2.7.0",
         "vuejs-datepicker": "^1.5.4"

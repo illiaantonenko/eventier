@@ -6,8 +6,19 @@ use Illuminate\Notifications\Notifiable;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 
+/**
+ * This is the model class for table "users".
+ *
+ * @property integer $id
+ * @property string $email
+ * @property string $role
+ * @property integer $moderated
+ * @property integer $created_at
+ * @property integer $updated_at
+ */
 class User extends Authenticatable implements MustVerifyEmail
 {
+
     use Notifiable;
 
     /**
@@ -16,7 +27,7 @@ class User extends Authenticatable implements MustVerifyEmail
      * @var array
      */
     protected $fillable = [
-        'name', 'email', 'password',
+        'name', 'email', 'password', 'moderated'
     ];
 
     /**
@@ -32,26 +43,73 @@ class User extends Authenticatable implements MustVerifyEmail
         'full_name'
     ];
 
-    public function profile(){
+//    public $profile;
+
+    public function profile()
+    {
         return $this->hasOne(Profile::class);
     }
 
-    public function news(){
+    public function news()
+    {
         return $this->hasMany(News::class);
     }
-    public function absence(){
+
+    public function absence()
+    {
         return $this->hasMany(Absence::class);
     }
 
-    public function event(){
+    public function event()
+    {
         return $this->hasMany(Event::class);
     }
 
-    public function eventRegistration(){
+    public function eventRegistration()
+    {
         return $this->hasMany(EventRegistration::class);
     }
 
-    public function getFullNameAttribute(){
-        return $this->profile->firstname." ".$this->profile->lastname;
+    public function getFullNameAttribute()
+    {
+        return $this->profile->firstname . " " . $this->profile->lastname;
+    }
+
+    /**
+     * Return link to profile image if has
+     * @return string|null
+     */
+    public function getProfileImage()
+    {
+        return $this->profile->image->profile->url;
+    }
+
+    /**
+     * Return link to small image if has
+     * @return string|null
+     */
+    public function getProfileImageSmall()
+    {
+        return $this->profile->image->small->url;
+    }
+
+    /**
+     * Return link to xsmall image if has
+     * @return string|null
+     */
+    public function getProfileImageXSmall()
+    {
+        return $this->profile->image->xsmall->url;
+    }
+
+    public function is($roleName)
+    {
+        foreach ($this->roles()->get() as $role) {
+            if ($role->name == $roleName) {
+                return true;
+            }
+        }
+
+        return false;
     }
 }

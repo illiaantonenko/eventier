@@ -34,7 +34,7 @@
                         @endif
                     </div>
                     <div class="form-group">
-                        <label class="control-label" for="nickname">Last name</label>
+                        <label class="control-label" for="nickname">Nickname</label>
                         <input type="text" id="nickname" class="form-control" name="nickname"
                                value="{{$user->profile->nickname}}">
                         @if($errors->has('nickname'))

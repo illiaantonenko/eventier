@@ -9,8 +9,12 @@ use Illuminate\Http\Request;
 class DashboardController extends Controller
 {
     public function index(){
-        $news = News::orderBy('important','DESC')->orderBy('created_at','DESC')->limit(6)->get();
+        $news = News::where('published', '=', '1')->orderBy('important','DESC')->orderBy('created_at','DESC')->limit(6)->get();
         $absences = Absence::orderBy('created_at','DESC')->with('user.profile')->limit(6)->get();
         return view('dashboard',compact('news','absences'));
+    }
+
+    public function test(){
+        return view('test');
     }
 }

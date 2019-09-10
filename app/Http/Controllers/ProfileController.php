@@ -60,7 +60,11 @@ class ProfileController extends Controller
      */
     public function edit(Profile $profile)
     {
-        //
+        if (auth()->user()->id === $profile->user->id){
+            return view('profile.update',compact('profile'));
+        }else{
+            return abort(403, __('messages.unauthorized'));
+        }
     }
 
     /**
@@ -96,7 +100,7 @@ class ProfileController extends Controller
 
         if($profile->save()){
 //            Session::flash('success','Profile updated!');
-            return redirect('/user/profile/my');
+            return redirect('/user/profile/edit/'.auth()->user()->id);
         }
     }
 
@@ -114,6 +118,6 @@ class ProfileController extends Controller
     public function myProfile()
     {
         $profile = Profile::where('user_id','=',auth()->user()->id)->first();
-        return view('profile.myprofile',compact('profile'));
+        return view('profile.update',compact('profile'));
     }
 }

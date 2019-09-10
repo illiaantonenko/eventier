@@ -6,7 +6,7 @@
         <div class="row">
             <div class="col-12">
                 <h1>{{ __('Calendar') }}</h1>
-                <full-calendar :config="config" :events="{{ $events }}"></full-calendar>
+                <Calendar events="{{ $events }}" lang="{{ $locale }}"></Calendar>
             </div>
         </div>
     </div>

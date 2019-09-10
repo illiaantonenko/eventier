@@ -6,9 +6,9 @@ return array(
     'assets_upload_path' => 'storage/app/uploads',
     'quality'     => 85,
     'default'     => [
-        'url'     => 'http://placehold.it/150x150',
-        'width'   => 150,
-        'height'  => 150
+        'url'     => 'http://placehold.it/160x120',
+        'width'   => 160,
+        'height'  => 120
     ],
     'dimensions'  => [
         ['50',  '50',   true,   85, 'thumbnail'],

@@ -11,6 +11,7 @@
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
+    <script src="{{ asset('js/main.js') }}" defer></script>
 
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
@@ -28,6 +29,15 @@
             <a class="navbar-brand" href="{{ url('/') }}">
                 {{ config('app.name', 'Laravel') }}
             </a>
+            @if(App::isLocale('en'))
+                <a class="navbar-brand" href="{{ url('/locale/ua') }}">
+                    {{ __('EN') }}
+                </a>
+            @else
+                <a class="navbar-brand" href="{{ url('/locale/en') }}">
+                    {{ __('EN') }}
+                </a>
+            @endif
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
                     aria-controls="navbarSupportedContent" aria-expanded="false"
                     aria-label="{{ __('Toggle navigation') }}">
@@ -54,51 +64,58 @@
                         @endif
                     @else
                         @verified
-                            @admin
-                                <li class="nav-item">
-                                    <a class="nav-link" href="/admin">{{ __('Admin panel') }}</a>
-                                </li>
-                            @endadmin
-                            <li class="nav-item">
-                                <a class="nav-link" href="/dashboard">{{ __('Dashboard') }}</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="/events">{{ __('Events') }}</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="/calendar">{{ __('Calendar') }}</a>
-                            </li>
+                        @admin
+                        <li class="nav-item">
+                            <a class="nav-link" href="/admin">{{ __('Admin panel') }}</a>
+                        </li>
+                        @endadmin
+                        <li class="nav-item">
+                            <a class="nav-link" href="/dashboard">{{ __('Dashboard') }}</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/calendar">{{ __('Calendar') }}</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/events">
+                                {{ __('Events') }}
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/news">
+                                {{ __('News') }}
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/absences">
+                                {{ __('Absences') }}
+                            </a>
+                        </li>
                         @endverified
-                            <li class="nav-item dropdown">
-                                <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button"
-                                   data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                                    {{ auth()->user()->full_name}} <span class="caret"></span>
+                        <li class="nav-item dropdown">
+                            <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button"
+                               data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                                {{ auth()->user()->full_name}} <span class="caret"></span>
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                                @verified
+                                <a class="dropdown-item" href="/user/profile/edit/{{auth()->user()->id}}">
+                                    {{ __('My Profile') }}
                                 </a>
-                                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                                    @verified
-                                        <a class="dropdown-item" href="/user/profile/my">
-                                            {{ __('My Profile') }}
-                                        </a>
-                                        <a class="dropdown-item" href="/dashboard/news">
-                                            {{ __('News') }}
-                                        </a>
-                                        <a class="dropdown-item" href="/dashboard/absences">
-                                            {{ __('Absences') }}
-                                        </a>
-                                    @endverified
-                                    <a class="dropdown-item" href="{{ route('logout') }}"
-                                       onclick="event.preventDefault();
-                                                     document.getElementById('logout-form').submit();">
-                                        {{ __('Logout') }}
-                                    </a>
+                                @endverified
+                                <a class="dropdown-item" href="{{ route('logout') }}"
+                                   onclick="event.preventDefault();
+                                    document.getElementById('logout-form').submit();"
+                                >
+                                    {{ __('Logout') }}
+                                </a>
 
-                                    <form id="logout-form" action="{{ route('logout') }}" method="POST"
-                                          style="display: none;">
-                                        @csrf
-                                    </form>
-                                </div>
-                            </li>
-                        @endguest
+                                <form id="logout-form" action="{{ route('logout') }}" method="POST"
+                                      style="display: none;">
+                                    @csrf
+                                </form>
+                            </div>
+                        </li>
+                    @endguest
                 </ul>
             </div>
         </div>

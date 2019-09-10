@@ -1,4 +1,3 @@
-
 /**
  * First we will load all of this project's JavaScript dependencies which
  * includes Vue and other libraries. It is a great starting point when
@@ -10,7 +9,10 @@ require('./bootstrap');
 window.Vue = require('vue');
 import Datepicker from 'vuejs-datepicker';
 import FullCalendar from 'vue-full-calendar';
+import $ from 'jquery';
+
 Vue.use(FullCalendar);
+
 
 /**
  * The following block of code may be used to automatically register your
@@ -27,6 +29,7 @@ Vue.use(FullCalendar);
 Vue.component('auth', require('./components/Auth.vue').default);
 Vue.component('login', require('./components/Login.vue').default);
 Vue.component('register', require('./components/Register.vue').default);
+Vue.component('calendar', require('./components/Calendar.vue').default);
 
 
 /**
@@ -40,12 +43,11 @@ const app = new Vue({
     components: {
         Datepicker,
     },
-    data(){
-        return{
-            // config: {
-            //     firstDay: 1,
-            //      editable: false
-            // }
+    data() {
+        return {
+
         }
     }
 });
+
+

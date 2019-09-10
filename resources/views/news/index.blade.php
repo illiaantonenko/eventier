@@ -8,7 +8,7 @@
                 <h1>{{ __('News') }}</h1>
                 <div class="pagination-sm">{{ $news->links() }}</div>
                 @foreach($news as $news_one)
-                    <a href="/dashboard/news/{{$news_one->id}}" style="text-decoration: none; color:#1e1e1e;">
+                    <a href="/news/{{$news_one->id}}" style="text-decoration: none; color:#1e1e1e;">
                         <div class="card" style="margin-bottom: 15px">
                             <div class="card-body">
                                 <h4><strong> {{ $news_one->title }}</strong></h4>

@@ -9,7 +9,7 @@
                 <div class="card">
                     <div class="card-body" style="display: flex ">
                         <div>
-                            <img src="{{ $user->profile->image->profile->url }}"/>
+                            <img src="{{ $user->getProfileImage() }}"/>
                         </div>
                         <div style="margin-left: 20px">
                             <div style="font-size: 20px; font-weight: 500">

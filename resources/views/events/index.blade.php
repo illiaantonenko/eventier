@@ -21,7 +21,7 @@
                                     <div class="text-left">
                                         {{ $event->description }}
                                         <div class="float-right" style="margin-top: 15px">
-                                            Date: {{  date('d-m-Y H:i',$event->start) }}</div>
+                                            {{ __('Published') }}: {{  date('d-m-Y H:i',$event->start) }}</div>
                                     </div>
                                 </div>
                             </a>

@@ -16,7 +16,7 @@ class CreateаbsencesTable extends Migration
         Schema::create('absences', function (Blueprint $table) {
             $table->increments('id');
             $table->unsignedInteger('user_id');
-            $table->string('reason');
+            $table->string('reason',255);
             $table->integer('date');
             $table->timestamps();
         });
@@ -29,6 +29,6 @@ class CreateаbsencesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('аbsences');
+        Schema::dropIfExists('absences');
     }
 }

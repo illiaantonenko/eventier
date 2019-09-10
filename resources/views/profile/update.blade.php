@@ -10,10 +10,9 @@
                         <form action="/user/profile/{{ $profile->id }}" method="post" enctype="multipart/form-data">
                             @csrf
                             {{ method_field('PUT') }}
-                            <img src="{{ $profile->image->profile->url }}"/>
                             <div class="form-group">
-                                <label class="control-label" for="image">{{ __('Image') }}</label>
-                                <input type="file" id="image" class="form-control" name="image" src="{{ $profile->image->profile->url }}">
+                                <input type="image" src="{{ $profile->image->profile->url }}"/>
+                                <input type="file" id="my_file" style="display: none;" />
                                 @if($errors->has('image'))
                                     <span class="text-danger">{{$errors->get('image')[0]}}</span>
                                 @endif

@@ -6,11 +6,11 @@
         <div class="row">
             <div class="col-12">
                 <div class="float-right">
-                    <a href="/dashboard/absences/create" class="btn btn-info btn-lg">{{ __('Create absence') }}</a>
+                    <a href="/absences/create" class="btn btn-info btn-lg">{{ __('Declare the absence') }}</a>
                 </div>
                 <h1>{{ __('Calendar') }}</h1>
                 <br>
-                <full-calendar :config="config" :events="{{ $events }}"></full-calendar>
+                <Calendar events="{{ $events }}" lang="{{ $locale }}"></Calendar>
             </div>
         </div>
     </div>

@@ -142,9 +142,21 @@ return [
             'label_color' => 'warning',
         ],
         [
+            'text'        => 'Categories',
+            'url'         => 'admin/categories',
+            'icon'        => 'folder-open',
+            'label_color' => 'warning',
+        ],
+        [
             'text'        => 'Users',
             'url'         => 'admin/users',
             'icon'        => 'users',
+            'label_color' => 'success',
+        ],
+        [
+            'text'        => 'Birthdays',
+            'url'         => 'admin/birthdays',
+            'icon'        => 'birthday-cake',
             'label_color' => 'success',
         ],
 //        'ACCOUNT SETTINGS',

@@ -23,7 +23,7 @@
                             </div>
                             <div>
                                 <strong>
-                                    Birth date:
+                                    {{__('Birth date')}}:
                                 </strong>
                                 @if(!$profile->hideyear)
                                     {{ date('d-m-Y',$profile->birthdate) }}
@@ -39,7 +39,7 @@
                 @foreach($absences as $absence)
                     <div class="card" style="margin-bottom: 15px">
                         <div class="card-body">
-                            <h6><strong>Date:{{ date('d-m-Y',$absence->date) }}</strong></h6>
+                            <h6><strong>{{__('Date')}}:{{ date('d-m-Y',$absence->date) }}</strong></h6>
                             <strong>{{ __('Reason') }}: </strong>{{ $absence->reason }}
                         </div>
                     </div>

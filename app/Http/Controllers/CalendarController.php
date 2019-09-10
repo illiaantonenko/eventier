@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Absence;
 use App\Models\Event;
-use Illuminate\Http\Request;
+use Illuminate\Support\Facades\App;
 
 class CalendarController extends Controller
 {
@@ -15,7 +15,7 @@ class CalendarController extends Controller
         foreach ($events as $event) {
             $event->start = date('Y-m-d\TH:i:s', $event->start);
             $event->end = date('Y-m-d\TH:i:s', $event->end);
-            $event->url = '/admin/events/' . $event->id;
+            $event->url = '/events/' . $event->id;
             $event->color = $event->category->color;
             $event->textColor = $event->category->textColor;
             $event->durationEditable = false;
@@ -29,6 +29,9 @@ class CalendarController extends Controller
             $absence->url = '/absences/' . $absence->id;
             $array[] = $absence;
         }
-        return view('calendar.index', ['events' => json_encode($array)]);
+
+        $locale = App::getLocale();
+
+        return view('calendar.index', ['events' => json_encode($array), 'locale' => $locale]);
     }
 }
