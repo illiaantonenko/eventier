@@ -24,6 +24,11 @@ class CreateEventsTable extends Migration
             $table->enum('repeat',['never','everyday','everyweek','everymonth','everyyear'])->default('never');
             $table->integer('published')->default(0);
             $table->timestamps();
+
+            $table->foreign('user_id')
+                ->references('id')
+                ->on('users')
+                ->onDelete('cascade');
         });
     }
 

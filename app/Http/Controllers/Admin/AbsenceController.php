@@ -4,16 +4,20 @@ namespace App\Http\Controllers\Admin;
 
 use App\Models\Absence;
 use App\Models\User;
+use Illuminate\Contracts\View\Factory;
+use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use Illuminate\Routing\Redirector;
 use Illuminate\Support\Facades\Session;
+use Illuminate\View\View;
 
 class AbsenceController extends Controller
 {
     /**
      * Display a listing of the resource.
      *
-     * @return \Illuminate\Http\Response
+     * @return Factory|View
      */
     public function index()
     {
@@ -24,7 +28,7 @@ class AbsenceController extends Controller
     /**
      * Show the form for creating a new resource.
      *
-     * @return \Illuminate\Http\Response
+     * @return Factory|View
      */
     public function create()
     {
@@ -35,8 +39,8 @@ class AbsenceController extends Controller
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
+     * @param Request $request
+     * @return RedirectResponse|Redirector
      */
     public function store(Request $request)
     {
@@ -62,7 +66,7 @@ class AbsenceController extends Controller
      * Display the specified resource.
      *
      * @param  Absence $absence
-     * @return \Illuminate\Http\Response
+     * @return Factory|View
      */
     public function show(Absence $absence)
     {
@@ -73,7 +77,7 @@ class AbsenceController extends Controller
      * Show the form for editing the specified resource.
      *
      * @param   Absence $absence
-     * @return \Illuminate\Http\Response
+     * @return Factory|View
      */
     public function edit(Absence $absence)
     {
@@ -84,9 +88,9 @@ class AbsenceController extends Controller
     /**
      * Update the specified resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
+     * @param Request $request
      * @param   Absence $absence
-     * @return \Illuminate\Http\Response
+     * @return RedirectResponse|Redirector
      */
     public function update(Request $request, Absence $absence)
     {
@@ -102,21 +106,26 @@ class AbsenceController extends Controller
 
         if ($absence->save()){
             Session::flash('success','Absence updated');
-            return redirect('/admin/absences');
+        }else{
+            Session::flash('error','Something went wrong! Absence is not updated');
         }
 
+        return redirect('/admin/absences');
     }
 
     /**
      * Remove the specified resource from storage.
      *
      * @param   Absence $absence
-     * @return \Illuminate\Http\Response
+     * @return RedirectResponse
      */
     public function destroy(Absence $absence)
     {
         if(Absence::destroy($absence->id)){
             Session::flash('success','Absence deleted');
+            return redirect()->back();
+        }else{
+            Session::flash('error','Something went wrong! Absence is not deleted');
             return redirect()->back();
         }
     }

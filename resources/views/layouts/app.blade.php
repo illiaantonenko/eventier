@@ -66,27 +66,27 @@
                         @verified
                         @admin
                         <li class="nav-item">
-                            <a class="nav-link" href="/admin">{{ __('Admin panel') }}</a>
+                            <a class="nav-link" href="{{ url('/admin') }}">{{ __('Admin panel') }}</a>
                         </li>
                         @endadmin
                         <li class="nav-item">
-                            <a class="nav-link" href="/dashboard">{{ __('Dashboard') }}</a>
+                            <a class="nav-link" href="{{ url('/dashboard') }}">{{ __('Dashboard') }}</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="/calendar">{{ __('Calendar') }}</a>
+                            <a class="nav-link" href="{{ url('/calendar') }}">{{ __('Calendar') }}</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="/events">
+                            <a class="nav-link" href="{{ url('/events') }}">
                                 {{ __('Events') }}
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="/news">
+                            <a class="nav-link" href="{{ url('/news') }}">
                                 {{ __('News') }}
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="/absences">
+                            <a class="nav-link" href="{{ url('/absences') }}">
                                 {{ __('Absences') }}
                             </a>
                         </li>
@@ -98,7 +98,7 @@
                             </a>
                             <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
                                 @verified
-                                <a class="dropdown-item" href="/user/profile/edit/{{auth()->user()->id}}">
+                                <a class="dropdown-item" href="{{url('/user/profile/edit',['id'=>auth()->user()->id])}}">
                                     {{ __('My Profile') }}
                                 </a>
                                 @endverified

@@ -6,7 +6,7 @@
         <div class="row">
             <div class="col-12">
                 <h1>Edit absence</h1>
-                <form method="post" action="/admin/absences/{{$absence->id}}">
+                <form method="post" action="{{ url('/admin/absences',['id'=>$absence->id]) }}">
                     @csrf
                     {{ method_field('PUT') }}
                     <div class="form-group">

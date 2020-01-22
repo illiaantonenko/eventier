@@ -6,7 +6,7 @@
         <div class="row">
             <div class="col-12">
                 <div class="float-right">
-                    <a href="/absences/create" class="btn btn-info btn-lg">{{ __('Declare the absence') }}</a>
+                    <a href="{{ url('/absences/create') }}" class="btn btn-info btn-lg">{{ __('Declare the absence') }}</a>
                 </div>
                 <h1>{{ __('Calendar') }}</h1>
                 <br>

@@ -98,7 +98,7 @@
 
     <div class="content">
         <div class="title m-b-md">
-            {{ __('PNTU') }}
+            {{ __('IT Label') }}
         </div>
 
         <div class="text">

@@ -8,11 +8,11 @@
                 <h1>Events</h1>
                 <div class="navigation">
                     <div class="pull-left">
-                        <a href="/admin/events/all" class="btn btn-info btn-lg">All events</a>
-                        <a href="/admin/events/new" class="btn btn-info btn-lg">New events</a>
+                        <a href="{{ url('/admin/events/all') }}" class="btn btn-info btn-lg">All events</a>
+                        <a href="{{ url('admin/events/new') }}/" class="btn btn-info btn-lg">New events</a>
                     </div>
                     <div class="pull-right">
-                        <a href="/admin/events/create"  class="btn btn-success btn-lg">Create event</a>
+                        <a href="{{ url('/admin/events/create') }}"  class="btn btn-success btn-lg">Create event</a>
                     </div>
                 </div>
                 <br>
@@ -39,11 +39,11 @@
                             <td>@if($event->start) {{ date('Y-m-d h:i:s',$event->start) }} @else --- @endif</td>
                             <td>@if($event->end) {{ date('Y-m-d h:i:s',$event->end) }} @else --- @endif</td>
                             <td>{{ $event->created_at }}</td>
-                            <td> <a href="/admin/events/{{$event->id}}/changestatus"> @if($event->published == 1) <i class="text-success fa fa-check"></i> @else <i class="text-danger fa fa-close"></i> </a> @endif </td>
+                            <td> <a href="{{ url('/admin/events/changestatus',['id'=>$event->id]) }}"> @if($event->published == 1) <i class="text-success fa fa-check"></i> @else <i class="text-danger fa fa-close"></i> </a> @endif </td>
                             <td width="13%">
-                                <a href="/admin/events/{{$event->id}}" class="btn btn-sm btn-primary"><i class="fa fa-eye"></i></a>
-                                <a href="/admin/events/{{$event->id}}/edit" class="btn btn-sm btn-warning"><i class="fa fa-edit"></i></a>
-                                <form method="post" action="/admin/events/{{$event->id}}" style="display:inline">
+                                <a href="{{ url('/admin/events',['id'=>$event->id]) }}" class="btn btn-sm btn-primary"><i class="fa fa-eye"></i></a>
+                                <a href="{{ url('',['id'=>$event->id]) }}/admin/events/edit" class="btn btn-sm btn-warning"><i class="fa fa-edit"></i></a>
+                                <form method="post" action="{{ url('/admin/events',['id'=>$event->id]) }}" style="display:inline">
                                     @csrf
                                     {{ method_field('DELETE') }}
                                     <button type="submit" class="btn btn-danger btn-sm"><i class="fa fa-close"></i> </button>

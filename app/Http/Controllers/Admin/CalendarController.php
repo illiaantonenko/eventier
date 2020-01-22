@@ -5,12 +5,16 @@ namespace App\Http\Controllers\Admin;
 use App\Models\Absence;
 use App\Models\Birthday;
 use App\Models\Event;
-use Illuminate\Http\Request;
+use Illuminate\Contracts\View\Factory;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\App;
+use Illuminate\View\View;
 
 class CalendarController extends Controller
 {
+    /**
+     * @return Factory|View
+     */
     public function index()
     {
         $array = [];

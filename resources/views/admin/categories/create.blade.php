@@ -5,8 +5,8 @@
     <div class="container-fluid">
         <div class="row">
             <div class="col-12">
-                <h1>Create event</h1>
-                <form method="post" action="/admin/categories">
+                <h1>Create category</h1>
+                <form method="post" action="{{ url('/admin/categories') }}">
                     @csrf
                     <div class="form-group">
                         <label class="control-label" for="name">Category name</label>

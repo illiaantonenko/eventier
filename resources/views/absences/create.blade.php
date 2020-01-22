@@ -6,7 +6,7 @@
         <div class="row">
             <div class="col-12">
                 <h1>{{ __('Absence') }}</h1>
-                <form action="/absences" method="post">
+                <form action="{{ url('/absences') }}" method="post">
                     @csrf
                     <div class="card">
                         <div class="card-header">

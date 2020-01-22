@@ -13,7 +13,7 @@
                     @foreach($events as $event)
                         <div class="card"
                              style="background-color: {{ $event->category->color }}; color: {{ $event->category->textColor }}">
-                            <a href="/events/{{ $event->id }}" style="text-decoration: none; color: unset">
+                            <a href="{{ url('/events',['id'=>  $event->id  ]) }}" style="text-decoration: none; color: unset">
                                 <div class="card-header">
                                     {{ $event->title }}
                                 </div>

@@ -6,7 +6,7 @@
         <div class="row">
             <div class="col-12">
                 <div class="pull-right">
-                    <a href="/admin/users/create" class="btn btn-success btn-lg">Create user</a>
+                    <a href="{{ url('/admin/users/create') }}" class="btn btn-success btn-lg">Create user</a>
                 </div>
                 <h1>Users</h1>
                 <br>
@@ -27,11 +27,11 @@
                             <td>{{ date('Y-m-d', $user->profile->birthdate) }}</td>
                             <td>{{ $user->created_at }}</td>
                             <td width="13%">
-                                <a href="/admin/users/{{$user->id}}" class="btn btn-sm btn-primary"><i
+                                <a href="{{ url('/admin/users',['id'=> $user->id ]) }}" class="btn btn-sm btn-primary"><i
                                         class="fa fa-eye"></i></a>
-                                <a href="/admin/users/{{$user->id}}/edit" class="btn btn-sm btn-warning"><i
+                                <a href="{{ url('/admin/users/edit',['id'=> $user->id ]) }}" class="btn btn-sm btn-warning"><i
                                         class="fa fa-edit"></i></a>
-                                <form method="post" action="/admin/users/{{$user->id}}" style="display:inline">
+                                <form method="post" action="{{ url('/admin/users',['id'=>$user->id]) }}" style="display:inline">
                                     @csrf
                                     {{ method_field('DELETE') }}
                                     <button type="submit" class="btn btn-danger btn-sm"><i class="fa fa-close"></i>

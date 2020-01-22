@@ -19,7 +19,7 @@
                                 @foreach($news as $news_one)
                                     <div class="card">
                                         <a style="text-decoration: none; color:#1e1e1e"
-                                           href="/news/{{ $news_one->id }}">
+                                           href="{{ url('/news',['id'=> $news_one->id ]) }}">
                                             <div class="card-body"
                                                  @if($news_one->important == 1) style="background-color: #b0d4f1"@endif>
                                                 <div class="text-left" style="margin-bottom: 15px">
@@ -51,7 +51,7 @@
                                     <br/>
                                 @endforeach
                                 <div class="float-right">
-                                    <a href="/news">{{__('See all')}}...</a>
+                                    <a href="{{ url('/news') }}">{{__('See all')}}...</a>
                                 </div>
                             </div>
                             <h2>{{__('Absences')}}</h2>
@@ -61,7 +61,7 @@
                                         <div class="card-body" style="background-color: #eaea00">
                                             <div class="text-left">
                                                 <h5 class="d-inline">
-                                                    <a href="/user/profile/{{ $absence->user->id }}"
+                                                    <a href="{{ url('/user/profile',['id'=> $absence->user->id ]) }}"
                                                        style="text-decoration: none; color:#1e1e1e">
                                                         <strong>{{ $absence->user->full_name }}:</strong>
                                                     </a>
@@ -73,7 +73,7 @@
                                     <br>
                                 @endforeach
                                 <div class="float-right">
-                                    <a href="/absences">{{__('See all')}}...</a>
+                                    <a href="{{ url('/absences') }}">{{__('See all')}}...</a>
                                 </div>
                             </div>
                         </div>

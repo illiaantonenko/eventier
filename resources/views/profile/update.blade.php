@@ -7,7 +7,7 @@
             <div class="col-12">
                 <div class="card">
                     <div class="card-body">
-                        <form action="/user/profile/{{ $profile->id }}" method="post" enctype="multipart/form-data">
+                        <form action="{{ url('/user/profile',['id'=> $profile->id ]) }}" method="post" enctype="multipart/form-data">
                             @csrf
                             {{ method_field('PUT') }}
                             <div class="form-group">

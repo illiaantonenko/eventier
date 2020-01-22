@@ -51,7 +51,7 @@ Route::group(['prefix' => '/admin', 'namespace' => 'Admin', 'middleware' => ['au
     });
 
     Route::resource('news', 'NewsController');
-    Route::get('news/{news}/changestatus', 'NewsController@changestatus');
+    Route::get('news/{news}/change-status', 'NewsController@changeStatus');
 
     Route::resource('absences', 'AbsenceController');
     Route::get('/events/all', 'EventController@allEvents');
@@ -59,7 +59,7 @@ Route::group(['prefix' => '/admin', 'namespace' => 'Admin', 'middleware' => ['au
     Route::get('/events/calendar', 'CalendarController@index');
 
     Route::resource('events', 'EventController')->except('index');
-    Route::get('events/{event}/changestatus', 'EventController@changestatus');
+    Route::get('events/{event}/change-status', 'EventController@changeStatus');
 
     Route::resource('categories', 'CategoryController')->except('show');
 

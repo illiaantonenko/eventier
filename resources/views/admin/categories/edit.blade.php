@@ -6,7 +6,7 @@
         <div class="row">
             <div class="col-12">
                 <h1>Create event</h1>
-                <form method="post" action="/admin/events/{{ $event->id }}">
+                <form method="post" action="{{ url('/admin/events',['id'=> $event->id ]) }}">
                     {{ method_field('PUT') }}
                     @csrf
                     <div class="form-group">

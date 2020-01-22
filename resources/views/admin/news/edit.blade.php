@@ -6,7 +6,7 @@
         <div class="row">
             <div class="col-12">
                 <h1>Edit {{$news->title}}</h1>
-                <form method="post" action="/admin/news/{{$news->id}}" enctype="multipart/form-data">
+                <form method="post" action="{{ url('/admin/news',['id'=>$news->id]) }}" enctype="multipart/form-data">
                     @csrf
                     {{ method_field('PUT') }}
                     <img src="{{ $news->image->thumbnail->url }}"/>

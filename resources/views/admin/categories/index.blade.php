@@ -8,7 +8,7 @@
                 <h1>Categories</h1>
                 <div class="navigation">
                     <div class="pull-right">
-                        <a href="/admin/categories/create"  class="btn btn-success btn-lg">Create new category</a>
+                        <a href="{{ url('/admin/categories/create') }}"  class="btn btn-success btn-lg">Create new category</a>
                     </div>
                 </div>
                 <br>
@@ -31,9 +31,9 @@
                             <td width="20%" style="background-color: {{ $category->color }}"></td>
                             <td>{{ $category->created_at }}</td>
                             <td width="15%">
-                                <a href="/admin/categories/{{$category->id}}" class="btn btn-sm btn-primary"><i class="fa fa-eye"></i></a>
-                                <a href="/admin/categories/{{$category->id}}/edit" class="btn btn-sm btn-warning"><i class="fa fa-edit"></i></a>
-                                <form method="post" action="/admin/categories/{{$category->id}}" style="display:inline">
+                                <a href="{{ url('/admin/categories',['id'=> $category->id ]) }}" class="btn btn-sm btn-primary"><i class="fa fa-eye"></i></a>
+                                <a href="{{ url('/admin/categories/edit',['id'=> $category->id ]) }}" class="btn btn-sm btn-warning"><i class="fa fa-edit"></i></a>
+                                <form method="post" action="{{ url('/admin/categories',['id'=>$category->id]) }}" style="display:inline">
                                     @csrf
                                     {{ method_field('DELETE') }}
                                     <button type="submit" class="btn btn-danger btn-sm"><i class="fa fa-close"></i> </button>

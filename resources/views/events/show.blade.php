@@ -17,7 +17,7 @@
                 </div>
                 @if($event->start > strtotime('today'))
                     <div style="margin-bottom: 20px;">
-                        <a href="/events/{{ $event->id }}/register" class="btn btn-info btn-lg">{{__('Register')}}</a>
+                        <a href="{{ url('/events/register',['id'=>  $event->id  ]) }}" class="btn btn-info btn-lg">{{__('Register')}}</a>
                     </div>
                 @endif
                 @foreach($eventRegistrations as $eventRegistration)

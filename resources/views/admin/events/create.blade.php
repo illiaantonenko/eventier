@@ -6,7 +6,7 @@
         <div class="row">
             <div class="col-12">
                 <h1>Create event</h1>
-                <form method="post" action="/admin/events">
+                <form method="post" action="{{ url('/admin/events') }}">
                     @csrf
                     <div class="form-group">
                         <label class="control-label" for="category">Category</label>

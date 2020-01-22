@@ -15,7 +15,7 @@
                             <div class="card-body">
                                 <div class="text-left">
                                     <h5 style="display: inline-block">
-                                        <a href="/user/profile/{{ $absence->user->id }}" style="text-decoration: none; color:#1e1e1e">
+                                        <a href="{{ url('/user/profile',['id'=> $absence->user->id ])}}" style="text-decoration: none; color:#1e1e1e">
                                             <strong>{{ $absence->user->full_name }}:</strong>
                                         </a>
                                     </h5>

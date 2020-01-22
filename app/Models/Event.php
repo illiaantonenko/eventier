@@ -4,6 +4,22 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
+/**
+ * This is the model class for table "birthdays".
+ *
+ * @property integer $id
+ * @property string $start
+ * @property string $end
+ * @property string $title
+ * @property string $description
+ * @property string $repeat
+ * @property integer $published
+ * @property integer $created_at
+ * @property integer $updated_at
+ *
+ * @property User $user
+ * @property Category $category
+ */
 class Event extends Model
 {
 

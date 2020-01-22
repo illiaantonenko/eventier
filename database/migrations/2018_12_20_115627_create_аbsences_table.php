@@ -19,6 +19,11 @@ class CreateаbsencesTable extends Migration
             $table->string('reason',255);
             $table->integer('date');
             $table->timestamps();
+
+            $table->foreign('user_id')
+                ->references('id')
+                ->on('users')
+                ->onDelete('cascade');
         });
     }
 

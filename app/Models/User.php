@@ -15,6 +15,8 @@ use Illuminate\Foundation\Auth\User as Authenticatable;
  * @property integer $moderated
  * @property integer $created_at
  * @property integer $updated_at
+ *
+ * @property Profile $profile
  */
 class User extends Authenticatable implements MustVerifyEmail
 {
@@ -27,7 +29,7 @@ class User extends Authenticatable implements MustVerifyEmail
      * @var array
      */
     protected $fillable = [
-        'name', 'email', 'password', 'moderated'
+        'email', 'password', 'moderated'
     ];
 
     /**
@@ -43,7 +45,6 @@ class User extends Authenticatable implements MustVerifyEmail
         'full_name'
     ];
 
-//    public $profile;
 
     public function profile()
     {
@@ -63,6 +64,11 @@ class User extends Authenticatable implements MustVerifyEmail
     public function event()
     {
         return $this->hasMany(Event::class);
+    }
+
+    public function birthday()
+    {
+        return $this->hasOne(Birthday::class);
     }
 
     public function eventRegistration()
@@ -94,7 +100,7 @@ class User extends Authenticatable implements MustVerifyEmail
     }
 
     /**
-     * Return link to xsmall image if has
+     * Return link to x-small image if has
      * @return string|null
      */
     public function getProfileImageXSmall()

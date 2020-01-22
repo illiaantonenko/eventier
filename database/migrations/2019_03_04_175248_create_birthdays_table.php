@@ -15,10 +15,15 @@ class CreateBirthdaysTable extends Migration
     {
         Schema::create('birthdays', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('user_id');
+            $table->unsignedInteger('user_id');
             $table->string('date');
             $table->integer('published');
             $table->timestamps();
+
+            $table->foreign('user_id')
+                ->references('id')
+                ->on('users')
+                ->onDelete('cascade');
         });
     }
 

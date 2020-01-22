@@ -4,16 +4,20 @@ namespace App\Http\Controllers\Admin;
 
 use App\Models\News;
 use App\Models\User;
+use Illuminate\Contracts\View\Factory;
+use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use Illuminate\Routing\Redirector;
 use Illuminate\Support\Facades\Session;
+use Illuminate\View\View;
 
 class NewsController extends Controller
 {
     /**
      * Display a listing of the resource.
      *
-     * @return \Illuminate\Http\Response
+     * @return Factory|View
      */
     public function index()
     {
@@ -24,7 +28,7 @@ class NewsController extends Controller
     /**
      * Show the form for creating a new resource.
      *
-     * @return \Illuminate\Http\Response
+     * @return Factory|View
      */
     public function create()
     {
@@ -35,8 +39,8 @@ class NewsController extends Controller
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
+     * @param Request $request
+     * @return RedirectResponse|Redirector
      */
     public function store(Request $request)
     {
@@ -49,6 +53,7 @@ class NewsController extends Controller
             'published'=>'required|integer',
         ]);
 
+        /** @var News $news */
         $news = News::create([
             'title'=> $request->title,
             'description'=> $request->description,
@@ -70,7 +75,7 @@ class NewsController extends Controller
      * Display the specified resource.
      *
      * @param   News $news
-     * @return \Illuminate\Http\Response
+     * @return Factory|View
      */
     public function show(News $news)
     {
@@ -81,7 +86,7 @@ class NewsController extends Controller
      * Show the form for editing the specified resource.
      *
      * @param    News $news
-     * @return \Illuminate\Http\Response
+     * @return Factory|View
      */
     public function edit(News $news)
     {
@@ -92,9 +97,9 @@ class NewsController extends Controller
     /**
      * Update the specified resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
+     * @param Request $request
      * @param    News $news
-     * @return \Illuminate\Http\Response
+     * @return RedirectResponse|Redirector
      */
     public function update(Request $request, News $news)
     {
@@ -118,32 +123,43 @@ class NewsController extends Controller
 
         if($news->save()){
             Session::flash('success','News updated');
-            return redirect('/admin/news');
+        }else{
+            Session::flash('error','Something went wrong! News is not updated');
         }
+        return redirect('/admin/news');
     }
 
     /**
      * Remove the specified resource from storage.
      *
      * @param   News $news
-     * @return \Illuminate\Http\Response
+     * @return RedirectResponse
      */
     public function destroy(News $news)
     {
         if(News::destroy($news->id)){
             Session::flash('success','News deleted');
-            return redirect()->back();
+        }else{
+            Session::flash('error','Something went wrong! News is not deleted');
         }
+        return redirect()->back();
     }
 
-    public function changestatus(News $news){
+    /**
+     * @param News $news
+     * @return RedirectResponse
+     */
+    public function changeStatus(News $news){
         if($news->published == 0){
             $news->published = 1;
         }else{
             $news->published = 0;
         }
-        $news->save();
-        Session::flash('success','Status changed');
+        if ($news->save()){
+            Session::flash('success','Status changed');
+        }else{
+            Session::flash('error','Something went wrong! Status is not changed');
+        }
         return redirect()->back();
     }
 }

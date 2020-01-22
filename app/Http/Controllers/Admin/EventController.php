@@ -6,6 +6,7 @@ use App\Models\Category;
 use App\Models\Event;
 use App\Models\EventRegistration;
 use App\Models\User;
+use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Session;
@@ -15,7 +16,7 @@ class EventController extends Controller
     /**
      * Display a listing of the events.
      *
-     * @return \Illuminate\Http\Response
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
      */
     public function allEvents()
     {
@@ -26,7 +27,7 @@ class EventController extends Controller
     /**
      * Display a listing of the events.
      *
-     * @return \Illuminate\Http\Response
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
      */
     public function newEvents()
     {
@@ -37,7 +38,7 @@ class EventController extends Controller
     /**
      * Show the form for creating a new event.
      *
-     * @return \Illuminate\Http\Response
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
      */
     public function create()
     {
@@ -51,7 +52,7 @@ class EventController extends Controller
      * Store a newly created resource in storage.
      *
      * @param \Illuminate\Http\Request $request
-     * @return \Illuminate\Http\Response
+     * @return RedirectResponse|\Illuminate\Routing\Redirector
      */
     public function store(Request $request)
     {
@@ -85,7 +86,7 @@ class EventController extends Controller
      * Display the specified event.
      *
      * @param Event $event
-     * @return \Illuminate\Http\Response
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
      */
     public function show(Event $event)
     {
@@ -97,7 +98,7 @@ class EventController extends Controller
      * Show the form for editing the specified event.
      *
      * @param Event $event
-     * @return \Illuminate\Http\Response
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
      */
     public function edit(Event $event)
     {
@@ -112,7 +113,7 @@ class EventController extends Controller
      *
      * @param \Illuminate\Http\Request $request
      * @param Event $event
-     * @return \Illuminate\Http\Response
+     * @return RedirectResponse|\Illuminate\Routing\Redirector
      */
     public function update(Request $request, Event $event)
     {
@@ -144,17 +145,23 @@ class EventController extends Controller
      * Remove the specified event from storage.
      *
      * @param Event $event
-     * @return \Illuminate\Http\Response
+     * @return RedirectResponse
      */
     public function destroy(Event $event)
     {
         if (Event::destroy($event->id)) {
-            Session::flash('success', 'Post deleted');
-            return redirect()->back();
+            Session::flash('success', 'Event deleted');
+        } else {
+            Session::flash('error', 'Something went wrong! Event is not deleted');
         }
+        return redirect()->back();
     }
 
-    public function changestatus(Event $event)
+    /**
+     * @param Event $event
+     * @return RedirectResponse
+     */
+    public function changeStatus(Event $event)
     {
         if ($event->published == 0) {
             if ($event->start != null) {

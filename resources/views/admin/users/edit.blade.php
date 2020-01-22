@@ -6,7 +6,7 @@
         <div class="row">
             <div class="col-12">
                 <h1>Edit user</h1>
-                <form method="post" action="/admin/users/{{$user->id}}">
+                <form method="post" action="{{ url('/admin/users',['id'=>$user->id]) }}">
                     @csrf
                     {{ method_field('PUT') }}
                     <div class="form-group">

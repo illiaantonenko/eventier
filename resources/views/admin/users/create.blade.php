@@ -7,7 +7,7 @@
         <div class="row">
             <div class="col-12">
                 <h1>Create user</h1>
-                <form method="post" action="/admin/users" enctype="multipart/form-data">
+                <form method="post" action="{{ url('/admin/users') }}" enctype="multipart/form-data">
                     @csrf
                     <div class="form-group">
                         <label class="control-label" for="image">Image</label>
