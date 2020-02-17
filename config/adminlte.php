@@ -108,7 +108,7 @@ return [
     */
 
     'menu' => [
-        'MAIN NAVIGATION',
+//        'MAIN NAVIGATION',
 //        [
 //            'text' => 'Blog',
 //            'url'  => 'admin/blog',
@@ -116,49 +116,49 @@ return [
 //             'label_color' => 'success',
 //            'can'  => 'manage-blog',
 //        ],
-        [
-            'text' => 'Calendar',
-            'url'  => 'admin/events/calendar',
-            'icon'        => 'calendar',
-            'label_color' => 'info',
-        ],
-        [
-            'text'        => 'Events',
-            'url' => 'admin/events/all',
-            'icon'        => 'bell',
-            'label_color' => 'success',
-
-        ],
-        [
-            'text'        => 'News',
-            'url'         => 'admin/news',
-            'icon'        => 'book',
-            'label_color' => 'info',
-        ],
-        [
-            'text'        => 'Absences',
-            'url'         => 'admin/absences',
-            'icon'        => 'comments',
-            'label_color' => 'warning',
-        ],
-        [
-            'text'        => 'Categories',
-            'url'         => 'admin/categories',
-            'icon'        => 'folder-open',
-            'label_color' => 'warning',
-        ],
-        [
-            'text'        => 'Users',
-            'url'         => 'admin/users',
-            'icon'        => 'users',
-            'label_color' => 'success',
-        ],
-        [
-            'text'        => 'Birthdays',
-            'url'         => 'admin/birthdays',
-            'icon'        => 'birthday-cake',
-            'label_color' => 'success',
-        ],
+//        [
+//            'text' => 'Calendar',
+//            'route' => 'admin.calendar.index',
+//            'icon' => 'calendar',
+//            'label_color' => 'info',
+//        ],
+//        [
+//            'text' => 'Events',
+//            'route' => 'admin.events.index',
+//            'icon' => 'bell',
+//            'label_color' => 'success',
+//
+//        ],
+//        [
+//            'text' => 'News',
+//            'route' => 'admin.news.index',
+//            'icon' => 'book',
+//            'label_color' => 'info',
+//        ],
+//        [
+//            'text' => 'Absences',
+//            'route' => 'admin.absences.index',
+//            'icon' => 'comments',
+//            'label_color' => 'warning',
+//        ],
+//        [
+//            'text' => 'Categories',
+//            'route' => 'admin.categories.index',
+//            'icon' => 'folder-open',
+//            'label_color' => 'warning',
+//        ],
+//        [
+//            'text' => 'Users',
+//            'route' => 'admin.users.index',
+//            'icon' => 'users',
+//            'label_color' => 'success',
+//        ],
+//        [
+//            'text' => 'Birthdays',
+//            'route' => 'admin.birthdays.index',
+//            'icon' => 'birthday-cake',
+//            'label_color' => 'success',
+//        ],
 //        'ACCOUNT SETTINGS',
 //        [
 //            'text' => 'Profile',
@@ -218,7 +218,7 @@ return [
 
     'plugins' => [
         'datatables' => true,
-        'select2'    => true,
-        'chartjs'    => true,
+        'select2' => true,
+        'chartjs' => true,
     ],
 ];

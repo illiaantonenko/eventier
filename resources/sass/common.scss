@@ -1,0 +1,16 @@
+// Fonts
+//@import url('https://fonts.googleapis.com/css?family=Nunito');
+@import '~@fullcalendar/core/main.css';
+@import '~@fullcalendar/daygrid/main.css';
+@import '~@fullcalendar/timegrid/main.css';
+
+.user-name {
+    font-size: 20px;
+    font-weight: 500
+}
+
+.headline {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 5px 15px;
+}

@@ -2,7 +2,7 @@
 
 use App\Models\Absence;
 use App\Models\Birthday;
-use App\Models\Category;
+use App\Models\EventCategory;
 use App\Models\Event;
 use App\Models\EventRegistration;
 use App\Models\News;
@@ -31,20 +31,20 @@ class DatabaseSeeder extends Seeder
         DB::table('profiles')->insert([
             'user_id' => 1,
             'firstname' => 'Illia',
-            'middlename' => '',
             'lastname' => 'Antonenko',
             'nickname' => 'redrevan',
-            'birthdate' => strtotime('11.08.1997'),
-            'hideyear' => 0,
-            'phone' => '+380999999999',
         ]);
-        factory(Category::class, 10)->create();
+        DB::table('birthdays')->insert([
+            'user_id' => 1,
+            'date' => \Carbon\Carbon::createFromDate('1997','08','11')->toDateString()
+        ]);
+        factory(EventCategory::class, 10)->create();
         factory(User::class, 25)->create()->each(function ($user) {
             /** @var User $user */
             $user->profile()->save(factory(Profile::class)->make());
             $user->birthday()->save(factory(Birthday::class)->make());
             $user->news()->saveMany(factory(News::class, 10)->make());
-            $user->absence()->saveMany(factory(Absence::class, 10)->make());
+            $user->absences()->saveMany(factory(Absence::class, 10)->make());
             $user->event()->saveMany(factory(Event::class, 10)->make());
             $user->event()->each(function ($event) {
                 /** @var Event $event */

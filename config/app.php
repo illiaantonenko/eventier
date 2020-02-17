@@ -15,6 +15,10 @@ return [
 
     'name' => env('APP_NAME', 'Eventier'),
 
+    'title_prefix' => 'Eventier',
+
+    'title_postfix' => '',
+
     /*
     |--------------------------------------------------------------------------
     | Application Environment

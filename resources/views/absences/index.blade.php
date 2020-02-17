@@ -1,3 +1,9 @@
+@php
+    use App\Models\Absence;
+    /**
+     * @var Absence $absence
+    */
+@endphp
 @extends('layouts.app')
 
 @section('content')
@@ -15,13 +21,14 @@
                             <div class="card-body">
                                 <div class="text-left">
                                     <h5 style="display: inline-block">
-                                        <a href="{{ url('/user/profile',['id'=> $absence->user->id ])}}" style="text-decoration: none; color:#1e1e1e">
-                                            <strong>{{ $absence->user->full_name }}:</strong>
+                                        <a href="{{ route('user.profile',['id'=> $absence->user->id ])}}"
+                                           style="text-decoration: none; color:#1e1e1e">
+                                            <b>{{ $absence->user->full_name }}:</b>
                                         </a>
                                     </h5>
                                     {{ $absence->reason }}
                                     <br/>
-                                    <div class="float-right">Date: {{  date('d-m-Y H:i',$absence->date) }}</div>
+                                    <div class="float-right">{{__("Date")}}: {{ $absence->date->toDateTimeString() }}</div>
                                 </div>
                             </div>
                         </div>

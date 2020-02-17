@@ -13,8 +13,4 @@ class DashboardController extends Controller
         $absences = Absence::orderBy('created_at','DESC')->with('user.profile')->limit(6)->get();
         return view('dashboard',compact('news','absences'));
     }
-
-    public function test(){
-        return view('test');
-    }
 }

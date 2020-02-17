@@ -2,48 +2,46 @@
 
 namespace App\Http\Controllers\Admin;
 
-use App\Models\Category;
+use App\Models\EventCategory;
 use App\Models\Event;
 use App\Models\EventRegistration;
 use App\Models\User;
+use Illuminate\Contracts\View\Factory;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use Illuminate\Routing\Redirector;
 use Illuminate\Support\Facades\Session;
+use Illuminate\View\View;
 
 class EventController extends Controller
 {
-    /**
-     * Display a listing of the events.
-     *
-     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
-     */
-    public function allEvents()
-    {
-        $events = Event::with('user.profile')->orderBy('id', 'DESC')->paginate(20);
-        return view('admin.events.index', compact('events'));
-    }
 
     /**
      * Display a listing of the events.
      *
-     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
+     * @param Request $request
+     * @return Factory|View
      */
-    public function newEvents()
+    public function index(Request $request)
     {
-        $events = Event::where('published', '=', '0')->with('user.profile')->orderBy('id', 'DESC')->paginate(20);
+//        $events = Event::when($request['new'], function ($query) {
+//            return $query->where('published', '=', '0');
+//        })->with('user.profile')->orderBy('id', 'DESC')->paginate(20);
+        $events = Event::search($request->all())->with('user.profile')->paginate(30);
+
         return view('admin.events.index', compact('events'));
     }
 
     /**
      * Show the form for creating a new event.
      *
-     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
+     * @return Factory|View
      */
     public function create()
     {
         $users = User::all();
-        $categories = Category::all();
+        $categories = EventCategory::all();
 
         return view('admin.events.create', compact('users', 'categories'));
     }
@@ -51,8 +49,8 @@ class EventController extends Controller
     /**
      * Store a newly created resource in storage.
      *
-     * @param \Illuminate\Http\Request $request
-     * @return RedirectResponse|\Illuminate\Routing\Redirector
+     * @param Request $request
+     * @return RedirectResponse|Redirector
      */
     public function store(Request $request)
     {
@@ -86,7 +84,7 @@ class EventController extends Controller
      * Display the specified event.
      *
      * @param Event $event
-     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
+     * @return Factory|View
      */
     public function show(Event $event)
     {
@@ -98,12 +96,12 @@ class EventController extends Controller
      * Show the form for editing the specified event.
      *
      * @param Event $event
-     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
+     * @return Factory|View
      */
     public function edit(Event $event)
     {
         $users = User::all();
-        $categories = Category::all();
+        $categories = EventCategory::all();
 
         return view('admin.events.edit', compact('users', 'categories', 'event'));
     }
@@ -111,9 +109,9 @@ class EventController extends Controller
     /**
      * Update the specified event in storage.
      *
-     * @param \Illuminate\Http\Request $request
+     * @param Request $request
      * @param Event $event
-     * @return RedirectResponse|\Illuminate\Routing\Redirector
+     * @return RedirectResponse|Redirector
      */
     public function update(Request $request, Event $event)
     {

@@ -7,8 +7,11 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'Laravel') }}</title>
+{{--    <title>@yield('title', config('app.name', 'Laravel'))</title>--}}
 
+    <title>@yield('title_prefix', config('app.title_prefix', ''))
+        @yield('title', config('app.name', 'Laravel'))
+        @yield('title_postfix', config('app.title_postfix', ''))</title>
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
     <script src="{{ asset('js/main.js') }}" defer></script>
@@ -30,11 +33,11 @@
                 {{ config('app.name', 'Laravel') }}
             </a>
             @if(App::isLocale('en'))
-                <a class="navbar-brand" href="{{ url('/locale/ua') }}">
+                <a class="navbar-brand" href="{{ route('locale.switch',['locale'=>'ua']) }}">
                     {{ __('EN') }}
                 </a>
             @else
-                <a class="navbar-brand" href="{{ url('/locale/en') }}">
+                <a class="navbar-brand" href="{{ route('locale.switch',['locale'=>'en']) }}">
                     {{ __('EN') }}
                 </a>
             @endif
@@ -66,27 +69,27 @@
                         @verified
                         @admin
                         <li class="nav-item">
-                            <a class="nav-link" href="{{ url('/admin') }}">{{ __('Admin panel') }}</a>
+                            <a class="nav-link" href="{{ route('admin.calendar') }}">{{ __('Admin panel') }}</a>
                         </li>
                         @endadmin
                         <li class="nav-item">
-                            <a class="nav-link" href="{{ url('/dashboard') }}">{{ __('Dashboard') }}</a>
+                            <a class="nav-link" href="{{ route('dashboard') }}">{{ __('Dashboard') }}</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="{{ url('/calendar') }}">{{ __('Calendar') }}</a>
+                            <a class="nav-link" href="{{ route('calendar') }}">{{ __('Calendar') }}</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="{{ url('/events') }}">
+                            <a class="nav-link" href="{{ route('events.index') }}">
                                 {{ __('Events') }}
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="{{ url('/news') }}">
+                            <a class="nav-link" href="{{ route('news.index') }}">
                                 {{ __('News') }}
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="{{ url('/absences') }}">
+                            <a class="nav-link" href="{{ route('absences.index') }}">
                                 {{ __('Absences') }}
                             </a>
                         </li>
@@ -98,7 +101,8 @@
                             </a>
                             <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
                                 @verified
-                                <a class="dropdown-item" href="{{url('/user/profile/edit',['id'=>auth()->user()->id])}}">
+                                <a class="dropdown-item"
+                                   href="{{route('user.profile.show',['id'=>auth()->user()->id])}}">
                                     {{ __('My Profile') }}
                                 </a>
                                 @endverified

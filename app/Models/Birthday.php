@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use Carbon\Carbon;
 use Illuminate\Database\Eloquent\Model;
 
 /**
@@ -9,7 +10,7 @@ use Illuminate\Database\Eloquent\Model;
  *
  * @property integer $id
  * @property integer $user_id
- * @property string $date
+ * @property Carbon $date
  * @property integer $published
  * @property integer $created_at
  * @property integer $updated_at
@@ -18,7 +19,9 @@ use Illuminate\Database\Eloquent\Model;
  */
 class Birthday extends Model
 {
-    protected $fillable = ['user_id','date','published'];
+    protected $fillable = ['user_id','date'];
+
+    protected $dates = ['date'];
 
     public function user(){
         return $this->belongsTo(User::class);

@@ -5,10 +5,10 @@
     <div class="container">
         <div class="row">
             <div class="col-12">
-                <div class="float-right">
+                <div class="headline">
+                    <h1>{{ __('Events') }}</h1>
                     <div class="pagination-sm">{{ $events->links() }}</div>
                 </div>
-                <h1>{{ __('Events') }}</h1>
                 <div class="card-columns">
                     @foreach($events as $event)
                         <div class="card"
@@ -21,7 +21,7 @@
                                     <div class="text-left">
                                         {{ $event->description }}
                                         <div class="float-right" style="margin-top: 15px">
-                                            {{ __('Published') }}: {{  date('d-m-Y H:i',$event->start) }}</div>
+                                            {{ __('Published') }}: {{  $event->start->toDateString() }}</div>
                                     </div>
                                 </div>
                             </a>

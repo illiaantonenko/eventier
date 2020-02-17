@@ -22,7 +22,7 @@
                     </div>
                 </div>
                 <h3>
-                    <strong>Description</strong>
+                    <b>Description</b>
                 </h3>
                 <div class="box">
                     <div class="box-body">
@@ -30,7 +30,7 @@
                     </div>
                 </div>
                 @if($event->category->name != 'Birthday')
-                    <h3><strong>Registered users</strong></h3>
+                    <h3><b>Registered users</b></h3>
                     @foreach($eventRegistrations as $eventRegistration)
                         <div class="info-box" style="margin-bottom: 15px">
                             <span class="info-box-icon">

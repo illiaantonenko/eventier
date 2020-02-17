@@ -1,13 +1,14 @@
 
 // Fonts
 @import url('https://fonts.googleapis.com/css?family=Nunito');
-@import "~fullcalendar/dist/fullcalendar.css";
 
 // Variables
 @import 'variables';
 
 // Bootstrap
 @import '~bootstrap/scss/bootstrap';
+
+@import "resources/sass/common.scss";
 
 .navbar-laravel {
     background-color: #fff;

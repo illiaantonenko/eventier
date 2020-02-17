@@ -1,4 +1,3 @@
-
 /**
  * First we will load all of this project's JavaScript dependencies which
  * includes Vue and other libraries. It is a great starting point when
@@ -8,10 +7,7 @@
 require('./bootstrap');
 
 window.Vue = require('vue');
-import Datepicker from 'vuejs-datepicker';
-import FullCalendar from 'vue-full-calendar';
-import colorPicker from '@caohenghu/vue-colorpicker'
-Vue.use(FullCalendar);
+import $ from 'jquery';
 
 Vue.component('calendar', require('./components/Calendar.vue').default);
 
@@ -32,17 +28,12 @@ Vue.component('calendar', require('./components/Calendar.vue').default);
  * or customize the JavaScript scaffolding to fit your unique needs.
  */
 
-
 const app = new Vue({
     el: '#app',
-    components: {
-        Datepicker,
-        colorPicker
-    },
-    data(){
-        return{
+    data() {
+        return {
             config: {
-                defaultView:'month',
+                defaultView: 'month',
                 firstDay: 1,
             }
         }

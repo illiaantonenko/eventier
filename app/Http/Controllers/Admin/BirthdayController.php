@@ -87,11 +87,12 @@ class BirthdayController extends Controller
     public function update(Request $request, Birthday $birthday)
     {
         $request->validate([
-            'user_id' => 'required|string|exists:users,id|unique:birthdays,user_id,'.$birthday->user_id,
+            'user_id' => 'required|string|exists:users,id|unique:birthdays,user_id,'.$birthday->id,
             'date' => 'required|date',
             'published' => 'required|integer',
         ]);
 
+//        $birthday->update($request->all());
         $birthday->user_id = $request->user_id;
         $birthday->date = strtotime($request->date);
         $birthday->published = $request->published;

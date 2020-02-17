@@ -12,7 +12,7 @@
                             <img src="{{ $user->getProfileImage() }}"/>
                         </div>
                         <div style="margin-left: 20px">
-                            <div style="font-size: 20px; font-weight: 500">
+                            <div class="user-name">
                                 {{ $user->profile->firstname}}
                                 @if($user->profile->nickname)
                                     <div class="d-inline" style="font-size: smaller">
@@ -22,21 +22,21 @@
                                 {{ $user->profile->lastname }}
                             </div>
                             <div>
-                                <strong>
+                                <b>
                                     Birth date:
-                                </strong>
-                                {{ date('d-m-Y',$user->profile->birthdate) }}
+                                </b>
+                                {{ $user->birthday->date->toDateString() }}
                             </div>
                         </div>
                     </div>
                 </div>
                 <br/>
                 <h3>{{ __('Absences') }}</h3>
-                @foreach($user->absence as $absence)
+                @foreach($user->absences as $absence)
                     <div class="card" style="border: 1px solid #666666; border-radius: 5px; background-color: white; margin-bottom: 15px">
                         <div class="card-body" style="padding: 0 10px 20px">
-                            <h6><strong>Date:{{ date('d-m-Y',$absence->date) }}</strong></h6>
-                            <strong>{{ __('Reason') }}: </strong>{{ $absence->reason }}
+                            <h6><b>Date: {{ $absence->date->toDateString() }}</b></h6>
+                            <b>{{ __('Reason') }}: </b>{{ $absence->reason }}
                         </div>
                     </div>
                 @endforeach

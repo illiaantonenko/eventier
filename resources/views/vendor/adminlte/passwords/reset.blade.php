@@ -26,7 +26,7 @@
                     <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
                     @if ($errors->has('email'))
                         <span class="help-block">
-                            <strong>{{ $errors->first('email') }}</strong>
+                            <b>{{ $errors->first('email') }}</b>
                         </span>
                     @endif
                 </div>
@@ -36,7 +36,7 @@
                     <span class="glyphicon glyphicon-lock form-control-feedback"></span>
                     @if ($errors->has('password'))
                         <span class="help-block">
-                            <strong>{{ $errors->first('password') }}</strong>
+                            <b>{{ $errors->first('password') }}</b>
                         </span>
                     @endif
                 </div>
@@ -46,7 +46,7 @@
                     <span class="glyphicon glyphicon-log-in form-control-feedback"></span>
                     @if ($errors->has('password_confirmation'))
                         <span class="help-block">
-                            <strong>{{ $errors->first('password_confirmation') }}</strong>
+                            <b>{{ $errors->first('password_confirmation') }}</b>
                         </span>
                     @endif
                 </div>

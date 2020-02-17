@@ -18,27 +18,31 @@ class CalendarController extends Controller
     public function index()
     {
         $array = [];
-        $events = Event::where('published', '=', '1')->select('id', 'title', 'start', 'end', 'category_id')->with('category')->get();
+        /** @var Event [] $events */
+        $events = Event::where('published', '=', '1')->select('id', 'title', 'start', 'end', 'repeat', 'category_id')->with('category')->get();
         foreach ($events as $event) {
-            $event->start = date('Y-m-d\TH:i:s', $event->start);
-            $event->end = date('Y-m-d\TH:i:s', $event->end);
-            $event->url = '/admin/events/' . $event->id;
+            $event->url = route('admin.events.show', ['id' => $event->id]);
             $event->color = $event->category->color;
             $event->textColor = $event->category->textColor;
             $array[] = $event;
         }
+        /** @var Absence [] $absences */
         $absences = Absence::orderBy('date', 'DESC')->with('user.profile')->get();
         foreach ($absences as $absence) {
             $absence->title = $absence->user->fullName . ' is absent';
-            $absence->start = date('Y-m-d', $absence->date);
-            $absence->url = '/admin/absences/' . $absence->id;
+            $absence->start = $absence->date->toDateString();
+            $absence->url = route('admin.absences.show', ['id' => $absence->id]);
             $array[] = $absence;
         }
+        /** @var Birthday [] $birthdays */
         $birthdays = Birthday::orderBy('date', 'DESC')->with('user.profile')->get();
         foreach ($birthdays as $birthday) {
-            $birthday->title = $birthday->user->fullName . ' is absent';
-            $birthday->start = date('Y-m-d', $birthday->date);
-            $birthday->url = '/admin/absences/' . $birthday->id;
+            $birthday->title = $birthday->user->fullName . ' Birthday';
+            $birthday->rrule = [
+                'freq' => 'yearly',
+                'dtstart' => $birthday->date->toDateString()
+            ];
+            $birthday->color = 'red';
             $array[] = $birthday;
         }
 

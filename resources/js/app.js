@@ -7,12 +7,7 @@
 require('./bootstrap');
 
 window.Vue = require('vue');
-import Datepicker from 'vuejs-datepicker';
-import FullCalendar from 'vue-full-calendar';
 import $ from 'jquery';
-
-Vue.use(FullCalendar);
-
 
 /**
  * The following block of code may be used to automatically register your
@@ -40,14 +35,8 @@ Vue.component('calendar', require('./components/Calendar.vue').default);
 
 const app = new Vue({
     el: '#app',
-    components: {
-        Datepicker,
-    },
+    components: {},
     data() {
-        return {
-
-        }
+        return {}
     }
 });
-
-

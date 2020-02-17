@@ -25,7 +25,7 @@
                     <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
                     @if ($errors->has('email'))
                         <span class="help-block">
-                            <strong>{{ $errors->first('email') }}</strong>
+                            <b>{{ $errors->first('email') }}</b>
                         </span>
                     @endif
                 </div>
@@ -35,7 +35,7 @@
                     <span class="glyphicon glyphicon-lock form-control-feedback"></span>
                     @if ($errors->has('password'))
                         <span class="help-block">
-                            <strong>{{ $errors->first('password') }}</strong>
+                            <b>{{ $errors->first('password') }}</b>
                         </span>
                     @endif
                 </div>

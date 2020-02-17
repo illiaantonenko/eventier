@@ -1,5 +1,6 @@
 @extends('layouts.app')
 
+@section('title', __('Dashboard'))
 @section('content')
 
     <div class="container">
@@ -28,13 +29,13 @@
                                                 </div>
                                                 <div class="d-inline">
                                                     <h5>
-                                                        <strong>
+                                                        <b>
                                                             @if(strlen($news_one->title) > 200)
                                                                 {{ substr($news_one->title,0,strpos($news_one->title,' ', 195)).'...' }}
                                                             @else
                                                                 {{ $news_one->title }}
                                                             @endif
-                                                        </strong>
+                                                        </b>
                                                     </h5>
                                                     <br/>
                                                 </div>
@@ -63,7 +64,7 @@
                                                 <h5 class="d-inline">
                                                     <a href="{{ url('/user/profile',['id'=> $absence->user->id ]) }}"
                                                        style="text-decoration: none; color:#1e1e1e">
-                                                        <strong>{{ $absence->user->full_name }}:</strong>
+                                                        <b>{{ $absence->user->full_name }}:</b>
                                                     </a>
                                                 </h5>
                                                 {{ $absence->reason }}

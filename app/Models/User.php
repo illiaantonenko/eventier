@@ -13,10 +13,16 @@ use Illuminate\Foundation\Auth\User as Authenticatable;
  * @property string $email
  * @property string $role
  * @property integer $moderated
+ * @property string $password
  * @property integer $created_at
  * @property integer $updated_at
  *
+ * // additional attributes
+ * @property string $fullName
+ *
  * @property Profile $profile
+ * @property Birthday $birthday
+ * @property Absence[] $absences
  */
 class User extends Authenticatable implements MustVerifyEmail
 {
@@ -56,7 +62,7 @@ class User extends Authenticatable implements MustVerifyEmail
         return $this->hasMany(News::class);
     }
 
-    public function absence()
+    public function absences()
     {
         return $this->hasMany(Absence::class);
     }

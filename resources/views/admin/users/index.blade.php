@@ -24,14 +24,14 @@
                             <td>{{ $user->id }}</td>
                             <td>{{ $user->full_name }}</td>
                             <td>{{ $user->role }}</td>
-                            <td>{{ date('Y-m-d', $user->profile->birthdate) }}</td>
+                            <td>{{ $user->birthday->date }}</td>
                             <td>{{ $user->created_at }}</td>
                             <td width="13%">
-                                <a href="{{ url('/admin/users',['id'=> $user->id ]) }}" class="btn btn-sm btn-primary"><i
+                                <a href="{{ route('admin.users.show',['id'=> $user->id ]) }}" class="btn btn-sm btn-primary"><i
                                         class="fa fa-eye"></i></a>
-                                <a href="{{ url('/admin/users/edit',['id'=> $user->id ]) }}" class="btn btn-sm btn-warning"><i
+                                <a href="{{ route('admin.users.edit',['id'=> $user->id ]) }}" class="btn btn-sm btn-warning"><i
                                         class="fa fa-edit"></i></a>
-                                <form method="post" action="{{ url('/admin/users',['id'=>$user->id]) }}" style="display:inline">
+                                <form method="post" action="{{ route('admin.users.destroy',['id'=>$user->id]) }}" style="display:inline">
                                     @csrf
                                     {{ method_field('DELETE') }}
                                     <button type="submit" class="btn btn-danger btn-sm"><i class="fa fa-close"></i>

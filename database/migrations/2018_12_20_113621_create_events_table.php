@@ -17,11 +17,11 @@ class CreateEventsTable extends Migration
             $table->increments('id');
             $table->unsignedInteger('user_id');
             $table->string('title');
-            $table->text('description');
+            $table->text('description')->nullable();
             $table->unsignedInteger('category_id');
-            $table->integer('start')->nullable();
-            $table->integer('end')->nullable();
-            $table->enum('repeat',['never','everyday','everyweek','everymonth','everyyear'])->default('never');
+            $table->timestamp('start')->nullable();
+            $table->timestamp('end')->nullable();
+            $table->enum('repeat',['never', 'daily', 'weekly', 'monthly', 'yearly'])->default('never');
             $table->integer('published')->default(0);
             $table->timestamps();
 

@@ -60,6 +60,20 @@
 
                                         <ul class="nav navbar-nav">
                                             <li>
+                                                @if(App::isLocale('en'))
+                                                    <a class="navbar-brand" href="{{ url('/locale/ua') }}">
+                                                        {{ __('EN') }}
+                                                    </a>
+                                                @else
+                                                    <a class="navbar-brand" href="{{ url('/locale/en') }}">
+                                                        {{ __('EN') }}
+                                                    </a>
+                                                @endif
+                                            </li>
+                                        </ul>
+
+                                        <ul class="nav navbar-nav">
+                                            <li>
                                                 @if(config('adminlte.logout_method') == 'GET' || !config('adminlte.logout_method') && version_compare(\Illuminate\Foundation\Application::VERSION, '5.3.0', '<'))
                                                     <a href="{{ url(config('adminlte.logout_url', 'auth/logout')) }}">
                                                         <i class="fa fa-fw fa-power-off"></i> {{ trans('adminlte::adminlte.log_out') }}
@@ -129,7 +143,7 @@
             </div>
             <!-- /.content-wrapper -->
         </div>
-    <!-- ./wrapper -->
+        <!-- ./wrapper -->
 
     </div>
 @stop

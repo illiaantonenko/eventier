@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Admin;
 
 use App\Mail\ModerationPassedMail;
 use App\Mail\WelcomeUserMail;
+use App\Models\Birthday;
 use App\Models\Profile;
 use App\Models\User;
 use Illuminate\Contracts\View\Factory;
@@ -24,7 +25,7 @@ class UserController extends Controller
      */
     public function index()
     {
-        $users = User::with('profile')->paginate(20);
+        $users = User::with(['profile', 'birthday'])->paginate(20);
         return view('admin.users.index', compact('users'));
     }
 
@@ -70,19 +71,20 @@ class UserController extends Controller
             $profile = Profile::create([
                 'user_id' => $user->id,
                 'firstname' => $request->firstname,
-                'middlename' => $request->middlename,
                 'lastname' => $request->lastname,
                 'nickname' => $request->nickname,
-                'birthdate' => strtotime($request->birthdate),
             ]);
+            $birthday = Birthday::firstOrNew(['user_id' => $user->id]);
+            $birthday->date = strtotime($request->birthdate);
+            $birthday->save();
             if ($profile) {
                 Session::flash('success', 'User created successfully');
                 return redirect('/admin/users');
             } else {
                 if (User::destroy($user->id)) {
                     Session::flash('error', 'Oops something went wrong');
-                }else{
-                    Session::flash('error','Something went wrong! Profile has not been created and User is not deleted!');
+                } else {
+                    Session::flash('error', 'Something went wrong! Profile has not been created and User is not deleted!');
                 }
                 return redirect('/admin/users');
             }
@@ -92,7 +94,7 @@ class UserController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  User $user
+     * @param User $user
      * @return Factory|View
      */
     public function show(User $user)
@@ -104,20 +106,20 @@ class UserController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  User $user
+     * @param User $user
      * @return Factory|View
      */
     public function edit(User $user)
     {
         $user->with('profile');
-        return view('admin.users.edit',compact('user'));
+        return view('admin.users.edit', compact('user'));
     }
 
     /**
      * Update the specified resource in storage.
      *
      * @param Request $request
-     * @param  User $user
+     * @param User $user
      * @return RedirectResponse|Redirector
      */
     public function update(Request $request, User $user)
@@ -136,27 +138,23 @@ class UserController extends Controller
             'moderated' => 'required|integer'
         ]);
 
-        if ($request->password){
+        if ($user->moderated == 0 && $request->moderated == 1) {
+            Mail::to($user->email)->send(new ModerationPassedMail());
+        }
+        $user->update($request->only(['email', 'role', 'moderated']));
+
+        if ($request->password) {
             $user->password = bcrypt($request->password);
         }
 
-        if ($user->moderated == 0 && $request->moderated == 1){
-            Mail::to($user->email)->send(new ModerationPassedMail());
-        }
-        $user->moderated = $request->moderated;
-        $user->role = $request->role;
+        $user->profile()->update($request->only($user->profile->getFillable()));
+        $birthday = Birthday::firstOrNew(['user_id' => $user->id]);
+        $birthday->date = strtotime($request->birthdate);
+        $birthday->save();
 
-        $user->profile->firstname = $request->firstname;
-        $user->profile->middlename = $request->middlename;
-        $user->profile->nickname = $request->nickname;
-        $user->profile->lastname = $request->lastname;
-        $user->profile->birthdate = strtotime($request->birthdate);
-        $user->profile->hideyear = $request->hideyear;
-        $user->profile->phone = $request->phone;
-
-        if($user->save() && $user->profile->save()){
-        }else{
-            Session::flash('error','Something went wrong! User is not updated');
+        if ($user->save() && $user->profile->save()) {
+        } else {
+            Session::flash('error', 'Something went wrong! User is not updated');
         }
         return redirect('/admin/users');
     }
@@ -164,15 +162,15 @@ class UserController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  User $user
+     * @param User $user
      * @return RedirectResponse
      */
     public function destroy(User $user)
     {
-        if(User::destroy($user->id)){
-            Session::flash('success','User deleted');
-        }else{
-            Session::flash('error','Something went wrong! User is not deleted');
+        if (User::destroy($user->id)) {
+            Session::flash('success', 'User deleted');
+        } else {
+            Session::flash('error', 'Something went wrong! User is not deleted');
         }
         return redirect()->back();
     }

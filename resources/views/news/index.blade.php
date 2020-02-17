@@ -11,7 +11,7 @@
                     <a href="{{ url('/news',['id'=> $news_one->id ]) }}" style="text-decoration: none; color:#1e1e1e;">
                         <div class="card" style="margin-bottom: 15px">
                             <div class="card-body">
-                                <h4><strong> {{ $news_one->title }}</strong></h4>
+                                <h4><b> {{ $news_one->title }}</b></h4>
                                 {{ $news_one->description }}
                             </div>
                         </div>

@@ -2,22 +2,19 @@
 
 namespace App\Models;
 
+use Carbon\Carbon;
 use Illuminate\Database\Eloquent\Model;
 use SahusoftCom\EloquentImageMutator\EloquentImageMutatorTrait;
+
 /**
  * This is the model class for table "profiles".
  *
  * @property integer $id
  * @property string $firstname
- * @property string $middlename
  * @property string $lastname
  * @property string $nickname
- * @property string $birthdate
- * @property string $hideyear
- * @property string $phone
- * @property integer $moderated
- * @property integer $created_at
- * @property integer $updated_at
+ * @property Carbon $created_at
+ * @property Carbon $updated_at
  *
  * @property User $user
  */
@@ -32,9 +29,18 @@ class Profile extends Model
      */
     protected $image_fields = ['image'];
 
-    protected $fillable = ['user_id','firstname','middlename','lastname','nickname','image','birthdate','hideyear','phone'];
+    protected $fillable = ['user_id', 'firstname', 'middlename', 'lastname', 'nickname', 'image', 'hideyear', 'phone'];
 
-    public function user(){
+    public function user()
+    {
         return $this->belongsTo(User::class);
+    }
+
+    /**
+     * @return array
+     */
+    public function getFillable(): array
+    {
+        return $this->fillable;
     }
 }

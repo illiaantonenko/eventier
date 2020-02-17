@@ -17,7 +17,7 @@ class CreateаbsencesTable extends Migration
             $table->increments('id');
             $table->unsignedInteger('user_id');
             $table->string('reason',255);
-            $table->integer('date');
+            $table->date('date');
             $table->timestamps();
 
             $table->foreign('user_id')

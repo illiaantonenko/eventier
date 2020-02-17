@@ -20,10 +20,10 @@ Route::get('/', function () {
 });
 
 // Localization
-Route::get('locale/{locale}', function ($locale){
+Route::get('locale/{locale}', function ($locale) {
     Session::put('locale', $locale);
     return redirect()->back();
-});
+})->name('locale.switch');
 // End localization
 
 //Auth::routes();
@@ -45,23 +45,24 @@ Route::get('email/resend', 'Auth\VerificationController@resend')->name('verifica
 
 
 // ADMIN ROUTES
-Route::group(['prefix' => '/admin', 'namespace' => 'Admin', 'middleware' => ['auth', 'admin']], function () {
+Route::name('admin.')->prefix('/admin')->namespace('Admin')->middleware(['auth', 'admin'])->group(function () {
     Route::get('/', function () {
-        return redirect('/admin/events/calendar');
+        return redirect()->route('admin.calendar');
     });
 
     Route::resource('news', 'NewsController');
-    Route::get('news/{news}/change-status', 'NewsController@changeStatus');
+    Route::get('news/{news}/change-status', 'NewsController@changeStatus')->name('news.change_status');
 
     Route::resource('absences', 'AbsenceController');
-    Route::get('/events/all', 'EventController@allEvents');
-    Route::get('/events/new', 'EventController@newEvents');
-    Route::get('/events/calendar', 'CalendarController@index');
 
-    Route::resource('events', 'EventController')->except('index');
-    Route::get('events/{event}/change-status', 'EventController@changeStatus');
+    Route::get('/calendar', 'CalendarController@index')->name('calendar');
 
-    Route::resource('categories', 'CategoryController')->except('show');
+    Route::resource('events', 'EventController');
+    Route::get('events/{event}/change-status', 'EventController@changeStatus')->name('events.change_status');
+
+    Route::name('events.')->group(function () {
+        Route::resource('categories', 'EventCategoryController')->except('show');
+    });
 
     Route::resource('users', 'UserController');
 
@@ -74,27 +75,17 @@ Route::get('/home', 'HomeController@index')->name('home')->middleware('auth');
 
 Route::group(['middleware' => ['auth', 'moderated', 'verified']], function () {
 
-//    Route::get('/', function () {
-//        return redirect('/dashboard');
-//    });
-//    Route::get('/home', function (){
-//        return redirect('/dashboard');
-//    });
-
-    Route::get('/test', 'DashboardController@test');
-    Route::get('/dashboard', 'DashboardController@index');
+    Route::get('/dashboard', 'DashboardController@index')->name('dashboard');
     Route::resource('news', 'NewsController');
     Route::resource('absences', 'AbsenceController');
 
 
-    Route::group(['prefix' => '/user'], function () {
-        Route::get('/profile/edit/{profile}', 'ProfileController@edit');
-        Route::get('/profile/{profile}', 'ProfileController@show');
-        Route::put('/profile/{profile}', 'ProfileController@update');
+    Route::prefix('/user')->name('user.')->group(function () {
+        Route::resource('profile', 'ProfileController')->only(['edit', 'update', 'show']);
     });
 
     Route::resource('events', 'EventController');
-    Route::get('/events/{event}/register', 'EventController@registerUserOnEvent');
-    Route::get('/events/confirm/{hash}', 'EventController@checkUserPresence')->middleware('eventOwner');
-    Route::get('/calendar', 'CalendarController@index');
+    Route::get('/events/{event}/register', 'EventController@registerUserOnEvent')->name('events.register');
+    Route::get('/events/confirm/{hash}', 'EventController@checkUserPresence')->middleware('eventOwner')->name('events.confirm');
+    Route::get('/calendar', 'CalendarController@index')->name('calendar');
 });
