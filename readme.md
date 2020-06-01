@@ -24,6 +24,6 @@ The project will be available at http://localhost:8012
 ### Admin credentials
 ##### login: ``` test@test.com```
 
-#####password: ```secret```
+##### password: ```secret```
 
 ## Make something amazing!
