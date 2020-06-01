@@ -26,7 +26,7 @@ class HomeController extends Controller
      */
     public function index()
     {
-        if (Gate::allows('moderated')){
+        if (Gate::allows('user-moderated')){
             return redirect('/dashboard');
         }else{
             return view('home');

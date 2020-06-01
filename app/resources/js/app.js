@@ -7,7 +7,6 @@
 require('./bootstrap');
 
 window.Vue = require('vue');
-import $ from 'jquery';
 
 /**
  * The following block of code may be used to automatically register your
@@ -20,12 +19,7 @@ import $ from 'jquery';
 // const files = require.context('./', true, /\.vue$/i)
 // files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(key).default))
 
-
-Vue.component('auth', require('./components/Auth.vue').default);
-Vue.component('login', require('./components/Login.vue').default);
-Vue.component('register', require('./components/Register.vue').default);
-Vue.component('calendar', require('./components/Calendar.vue').default);
-
+Vue.component('example-component', require('./components/ExampleComponent.vue').default);
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to
@@ -35,8 +29,4 @@ Vue.component('calendar', require('./components/Calendar.vue').default);
 
 const app = new Vue({
     el: '#app',
-    components: {},
-    data() {
-        return {}
-    }
 });
